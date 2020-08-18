@@ -1,3 +1,17 @@
+html {
+  display: flex;
+  min-height: 100%;
+  margin: 0;
+}
+
 body {
   margin: 0;
+  flex: 1;
+  display: flex;
+}
+
+#___gatsby,
+#gatsby-focus-wrapper {
+  flex: 1;
+  display: flex;
 }
