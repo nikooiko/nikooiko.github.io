@@ -12,6 +12,7 @@ import {
   Accordion,
   AccordionSummary,
   AccordionDetails,
+  Tooltip,
 } from "@material-ui/core";
 
 import TreeView from "@material-ui/lab/TreeView";
@@ -30,6 +31,12 @@ import TimelineOppositeContent from "@material-ui/lab/TimelineOppositeContent";
 import {makeStyles} from "@material-ui/styles";
 
 import CentaurLogo from "../images/centaur_logo.png";
+import AngularJS from "../images/technologies/angularjs_logo.png";
+import NodeJS from "../images/technologies/nodejs_logo.png";
+import MongoDB from "../images/technologies/mongodb_logo.png";
+import Loopback from "../images/technologies/lb_logo.png";
+import ZephyrOS from "../images/technologies/zephyr_logo.png";
+
 import BreakColumn from "../components/BreakColumn";
 import {centaurColorDark, isMobile} from "../helpers";
 
@@ -233,6 +240,27 @@ const useStyles = makeStyles((theme: Theme) => ({
       textAlign: "justify",
     },
   },
+  technology: {
+    width: theme.spacing(15),
+    height: theme.spacing(15),
+    [theme.breakpoints.down("sm")]: {
+      width: theme.spacing(7),
+      height: theme.spacing(7),
+    },
+    [theme.breakpoints.between("sm", "md")]: {
+      width: theme.spacing(11),
+      height: theme.spacing(11),
+    },
+    [theme.breakpoints.between("md", "lg")]: {
+      width: theme.spacing(13),
+      height: theme.spacing(13),
+    },
+  },
+  technologyWrapper: {
+    flex: 1,
+    display: "flex",
+    justifyContent: "center",
+  },
 }));
 
 const skillsAccordion = "skills";
@@ -377,6 +405,91 @@ const Index = () => {
                               <Typography variant="subtitle2" component="h1">
                                 NodeJS (MEAN Stack), C (ZephyrOS)
                               </Typography>
+                              <Grid
+                                direction="row"
+                                // alignItems="center"
+                                container
+                              >
+                                <Grid
+                                  item
+                                  className={classes.technologyWrapper}
+                                >
+                                  <Tooltip title="MongoDB" aria-label="mongodb">
+                                    <Link
+                                      href="https://www.mongodb.com/"
+                                      target="_blank"
+                                    >
+                                      <Avatar
+                                        alt="MongoDB"
+                                        src={MongoDB}
+                                        className={classes.technology}
+                                      />
+                                    </Link>
+                                  </Tooltip>
+                                </Grid>
+                                <Grid className={classes.technologyWrapper}>
+                                  <Tooltip
+                                    title="Loopback"
+                                    aria-label="loopback"
+                                  >
+                                    <Link
+                                      href="https://loopback.io/lb3"
+                                      target="_blank"
+                                    >
+                                      <Avatar
+                                        alt="Loopback"
+                                        src={Loopback}
+                                        className={classes.technology}
+                                      />
+                                    </Link>
+                                  </Tooltip>
+                                </Grid>
+                                <Grid className={classes.technologyWrapper}>
+                                  <Tooltip
+                                    title="AngularJS"
+                                    aria-label="angularjs"
+                                  >
+                                    <Link
+                                      href="https://angularjs.org/"
+                                      target="_blank"
+                                    >
+                                      <Avatar
+                                        alt="AngularJS"
+                                        src={AngularJS}
+                                        className={classes.technology}
+                                      />
+                                    </Link>
+                                  </Tooltip>
+                                </Grid>
+                                <Grid className={classes.technologyWrapper}>
+                                  <Tooltip title="NodeJS" aria-label="nodejs">
+                                    <Link
+                                      href="https://nodejs.org/"
+                                      target="_blank"
+                                    >
+                                      <Avatar
+                                        alt="NodeJS"
+                                        src={NodeJS}
+                                        className={classes.technology}
+                                      />
+                                    </Link>
+                                  </Tooltip>
+                                </Grid>
+                                <Grid className={classes.technologyWrapper}>
+                                  <Tooltip title="ZephyrOS" aria-label="zephyr">
+                                    <Link
+                                      href="https://www.zephyrproject.org/"
+                                      target="_blank"
+                                    >
+                                      <Avatar
+                                        alt="ZephyrOS"
+                                        src={ZephyrOS}
+                                        className={classes.technology}
+                                      />
+                                    </Link>
+                                  </Tooltip>
+                                </Grid>
+                              </Grid>
                               <br />
                               <Typography>
                                 From 2018, I'm a senior software engineer
