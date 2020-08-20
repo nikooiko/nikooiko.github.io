@@ -17,7 +17,7 @@ const Layout = ({children, title}) => (
         display="flex"
         alignItems="center"
         flexDirection="column"
-        p={2}
+        p={1}
       >
         {children}
       </Box>
