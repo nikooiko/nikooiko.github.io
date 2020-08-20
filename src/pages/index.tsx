@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Layout from "../components/Layout";
 import {
   Box,
@@ -9,6 +9,9 @@ import {
   Theme,
   Avatar,
   Link,
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
 } from "@material-ui/core";
 
 import TreeView from "@material-ui/lab/TreeView";
@@ -28,9 +31,8 @@ import {makeStyles} from "@material-ui/styles";
 
 import CentaurLogo from "../images/centaur_logo.png";
 import BreakColumn from "../components/BreakColumn";
+import {centaurColorDark, isMobile} from "../helpers";
 
-const centaurColorLight = "#bf976f";
-const centaurColorDark = "#3a3a3c";
 const centaurTitle = "Senior Software Engineer";
 
 interface Skill {
@@ -233,8 +235,21 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
 }));
 
+const skillsAccordion = "skills";
+
 const Index = () => {
+  const mobile = isMobile();
   const classes = useStyles();
+  const [expanded, setExpanded] = React.useState<string>("");
+  const handleChange = (accodrion: string) => (
+    event: React.ChangeEvent<{}>,
+    isExpanded: boolean
+  ) => {
+    setExpanded(isExpanded ? accodrion : "");
+  };
+  useEffect(() => {
+    setExpanded(mobile ? "" : skillsAccordion);
+  }, [mobile]);
   return (
     <Layout title="About">
       <Box
@@ -276,9 +291,12 @@ const Index = () => {
             </Card>
           </Grid>
           <BreakColumn />
-          <Grid item xs={12} sm={4} md={3} lg={2} style={{width: "100%"}}>
-            <Card style={{height: "100%"}}>
-              <CardContent className={classes.cardContent}>
+          <Grid item xs={12} sm={4} md={3} lg={2}>
+            <Accordion
+              expanded={expanded === skillsAccordion}
+              onChange={handleChange(skillsAccordion)}
+            >
+              <AccordionSummary expandIcon={<ExpandMoreIcon />}>
                 <Typography
                   variant="subtitle2"
                   component="h2"
@@ -286,6 +304,8 @@ const Index = () => {
                 >
                   Skills
                 </Typography>
+              </AccordionSummary>
+              <AccordionDetails>
                 <TreeView
                   defaultCollapseIcon={<ExpandMoreIcon />}
                   defaultExpandIcon={<ChevronRightIcon />}
@@ -294,8 +314,8 @@ const Index = () => {
                 >
                   {skillsTreeElements}
                 </TreeView>
-              </CardContent>
-            </Card>
+              </AccordionDetails>
+            </Accordion>
           </Grid>
           <Grid item xs={12} sm={8} md={9} lg={8}>
             <Grid container spacing={2} direction="row" justify="center">
@@ -363,7 +383,7 @@ const Index = () => {
                                 leading Centaur’s embedded team while
                                 occasionally supporting the web team by taking
                                 some load off of their hands when a critical
-                                deadline approached. This allowed me to rapidly
+                                deadline approaches. This allows me to rapidly
                                 create truly end-to-end solutions, ranging from
                                 the embedded device to the client application.
                               </Typography>
