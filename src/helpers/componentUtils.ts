@@ -5,3 +5,6 @@ export const isMobile = (): boolean => {
   const theme = useTheme<Theme>();
   return !!useMediaQuery(theme.breakpoints.down("xs"));
 };
+
+export const mergeClasses = (...classes: string[]): string =>
+  [...classes].join(" ");

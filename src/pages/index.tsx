@@ -31,6 +31,7 @@ import TimelineOppositeContent from "@material-ui/lab/TimelineOppositeContent";
 import {makeStyles} from "@material-ui/styles";
 
 import CentaurLogo from "../images/centaur_logo.png";
+import UthLogo from "../images/ece_uth_logo.png";
 import AngularJS from "../images/technologies/angularjs_logo.png";
 import NodeJS from "../images/technologies/nodejs_logo.png";
 import MongoDB from "../images/technologies/mongodb_logo.png";
@@ -38,7 +39,12 @@ import Loopback from "../images/technologies/lb_logo.png";
 import ZephyrOS from "../images/technologies/zephyr_logo.png";
 
 import BreakColumn from "../components/BreakColumn";
-import {centaurColorDark, isMobile} from "../helpers";
+import {
+  centaurColorDark,
+  centaurColorLight,
+  isMobile,
+  mergeClasses,
+} from "../helpers";
 
 const centaurTitle = "Senior Software Engineer";
 
@@ -188,20 +194,14 @@ const useStyles = makeStyles((theme: Theme) => ({
     paddingLeft: "8px",
     paddingRight: 0,
   },
-  centaurTitle: {
-    color: centaurColorDark,
+  timelineRightSubContent: {
+    marginTop: "24px",
   },
-  centaurTitlePlaceholder: {
+  timelineTitlePlaceholder: {
     height: 0,
     visibility: "hidden",
   },
-  centaurDesc: {
-    color: centaurColorDark,
-  },
-  centaurDot: {
-    backgroundColor: centaurColorDark,
-  },
-  centaurDotPlaceholder: {
+  timelineDotPlaceholder: {
     visibility: "hidden",
     height: 0,
     marginTop: 0,
@@ -209,26 +209,33 @@ const useStyles = makeStyles((theme: Theme) => ({
     paddingTop: 0,
     paddingBottom: 0,
   },
-  centaurDotSecondary: {
-    marginLeft: "20px",
-    marginTop: "2px",
-    backgroundColor: centaurColorDark,
-    [theme.breakpoints.down("sm")]: {
-      marginLeft: "12px",
-    },
-  },
-  centaurAvatar: {
+  timelineAvatarDot: {
     [theme.breakpoints.down("sm")]: {
       width: theme.spacing(3),
       height: theme.spacing(3),
     },
   },
+  centaurTitle: {
+    color: centaurColorDark,
+  },
+  centaurLightText: {
+    color: centaurColorLight,
+  },
+  centaurDesc: {
+    color: centaurColorDark,
+  },
+  centaurDot: {
+    backgroundColor: centaurColorDark,
+  },
   centaurConnector: {
     backgroundColor: centaurColorDark,
   },
   uthDesc: {},
+  uthText: {
+    color: theme.palette.primary.dark,
+  },
   uthDot: {
-    backgroundColor: theme.palette.primary.dark,
+    backgroundColor: theme.palette.grey[50],
   },
   uthConnector: {
     backgroundColor: theme.palette.primary.dark,
@@ -278,6 +285,12 @@ const Index = () => {
   useEffect(() => {
     setExpanded(mobile ? "" : skillsAccordion);
   }, [mobile]);
+  const centaurLogoEl = (
+    <Avatar alt="N" src={CentaurLogo} className={classes.timelineAvatarDot} />
+  );
+  const uthLogoEl = (
+    <Avatar alt="N" src={UthLogo} className={classes.timelineAvatarDot} />
+  );
   return (
     <Layout title="About">
       <Box
@@ -290,7 +303,7 @@ const Index = () => {
         <Grid container spacing={2} direction="row" justify="center">
           <Grid item xs={12} lg={10}>
             <Card>
-              <CardContent className={classes.cardContent}>
+              <CardContent>
                 <Typography
                   variant="subtitle2"
                   component="h2"
@@ -298,7 +311,7 @@ const Index = () => {
                 >
                   Summary
                 </Typography>
-                <Typography variant="h6" component="h1" gutterBottom>
+                <Typography variant="h6" component="h2" gutterBottom>
                   <b>Senior Software Engineer</b> at{" "}
                   <i>Centaur Analytics Inc</i>. and <b>PhD candidate</b> at{" "}
                   <i>University of Thessaly</i>.
@@ -369,15 +382,16 @@ const Index = () => {
                           >
                             {centaurTitle}
                           </Typography>
-                          <Typography color="textSecondary">Current</Typography>
+                          <Typography
+                            color="textSecondary"
+                            className={classes.centaurLightText}
+                          >
+                            Current
+                          </Typography>
                         </TimelineOppositeContent>
                         <TimelineSeparator>
                           <TimelineDot className={classes.centaurDot}>
-                            <Avatar
-                              alt="N"
-                              src={CentaurLogo}
-                              className={classes.centaurAvatar}
-                            />
+                            {centaurLogoEl}
                           </TimelineDot>
                           <TimelineConnector
                             className={classes.centaurConnector}
@@ -388,12 +402,16 @@ const Index = () => {
                         >
                           <Card>
                             <CardContent
-                              className={[
+                              className={mergeClasses(
                                 classes.centaurDesc,
-                                classes.desc,
-                              ].join(" ")}
+                                classes.desc
+                              )}
                             >
-                              <Typography variant="h6" component="h1">
+                              <Typography
+                                variant="h6"
+                                component="h2"
+                                className={classes.centaurLightText}
+                              >
                                 <Link
                                   href="https://centaur.ag"
                                   color="inherit"
@@ -402,7 +420,7 @@ const Index = () => {
                                   Centaur Analytics
                                 </Link>
                               </Typography>
-                              <Typography variant="subtitle2" component="h1">
+                              <Typography variant="subtitle2" component="h2">
                                 NodeJS (MEAN Stack), C (ZephyrOS)
                               </Typography>
                               <Grid
@@ -524,42 +542,46 @@ const Index = () => {
                           <Typography
                             component="h2"
                             variant="h6"
-                            className={[
+                            className={mergeClasses(
                               classes.centaurTitle,
-                              classes.centaurTitlePlaceholder,
-                            ].join(" ")}
+                              classes.timelineTitlePlaceholder
+                            )}
                           >
                             {centaurTitle}
                           </Typography>
                         </TimelineOppositeContent>
                         <TimelineSeparator>
                           <TimelineDot
-                            className={[
+                            className={mergeClasses(
                               classes.centaurDot,
-                              classes.centaurDotPlaceholder,
-                            ].join(" ")}
+                              classes.timelineDotPlaceholder
+                            )}
                           >
                             {/* Placeholder DoT just for correct alignment */}
-                            <Avatar
-                              alt="N"
-                              src={CentaurLogo}
-                              className={classes.centaurAvatar}
-                            />
+                            {centaurLogoEl}
                           </TimelineDot>
-                          <Typography color="textSecondary">2018</Typography>
+                          <Typography
+                            color="textSecondary"
+                            className={classes.centaurLightText}
+                          >
+                            2018
+                          </Typography>
                           <TimelineConnector
                             className={classes.centaurConnector}
                           />
                         </TimelineSeparator>
                         <TimelineContent
-                          className={classes.timelineRightContent}
+                          className={mergeClasses(
+                            classes.timelineRightContent,
+                            classes.timelineRightSubContent
+                          )}
                         >
                           <Card>
                             <CardContent
-                              className={[
+                              className={mergeClasses(
                                 classes.centaurDesc,
-                                classes.desc,
-                              ].join(" ")}
+                                classes.desc
+                              )}
                             >
                               <Typography>
                                 After my first year at centaur, I started
@@ -577,42 +599,46 @@ const Index = () => {
                           <Typography
                             component="h2"
                             variant="h6"
-                            className={[
+                            className={mergeClasses(
                               classes.centaurTitle,
-                              classes.centaurTitlePlaceholder,
-                            ].join(" ")}
+                              classes.timelineTitlePlaceholder
+                            )}
                           >
                             {centaurTitle}
                           </Typography>
                         </TimelineOppositeContent>
                         <TimelineSeparator>
                           <TimelineDot
-                            className={[
+                            className={mergeClasses(
                               classes.centaurDot,
-                              classes.centaurDotPlaceholder,
-                            ].join(" ")}
+                              classes.timelineDotPlaceholder
+                            )}
                           >
                             {/* Placeholder DoT just for correct alignment */}
-                            <Avatar
-                              alt="N"
-                              src={CentaurLogo}
-                              className={classes.centaurAvatar}
-                            />
+                            {centaurLogoEl}
                           </TimelineDot>
-                          <Typography color="textSecondary">2017</Typography>
+                          <Typography
+                            color="textSecondary"
+                            className={classes.centaurLightText}
+                          >
+                            2017
+                          </Typography>
                           <TimelineConnector
                             className={classes.centaurConnector}
                           />
                         </TimelineSeparator>
                         <TimelineContent
-                          className={classes.timelineRightContent}
+                          className={mergeClasses(
+                            classes.timelineRightContent,
+                            classes.timelineRightSubContent
+                          )}
                         >
                           <Card>
                             <CardContent
-                              className={[
+                              className={mergeClasses(
                                 classes.centaurDesc,
-                                classes.desc,
-                              ].join(" ")}
+                                classes.desc
+                              )}
                             >
                               <Typography>
                                 In 2016 I joined the web app team, as a
@@ -630,29 +656,27 @@ const Index = () => {
                           <Typography
                             component="h2"
                             variant="h6"
-                            className={[
-                              classes.centaurTitle,
-                              classes.centaurTitlePlaceholder,
-                            ].join(" ")}
+                            className={classes.timelineTitlePlaceholder}
                           >
                             {centaurTitle}
                           </Typography>
                         </TimelineOppositeContent>
                         <TimelineSeparator>
                           <TimelineDot
-                            className={[
+                            className={mergeClasses(
                               classes.centaurDot,
-                              classes.centaurDotPlaceholder,
-                            ].join(" ")}
+                              classes.timelineDotPlaceholder
+                            )}
                           >
                             {/* Placeholder DoT just for correct alignment */}
-                            <Avatar
-                              alt="N"
-                              src={CentaurLogo}
-                              className={classes.centaurAvatar}
-                            />
+                            {centaurLogoEl}
                           </TimelineDot>
-                          <Typography color="textSecondary">2016</Typography>
+                          <Typography
+                            color="textSecondary"
+                            className={classes.centaurLightText}
+                          >
+                            2016
+                          </Typography>
                         </TimelineSeparator>
                         <TimelineContent
                           className={classes.timelineRightContent}
@@ -680,12 +704,17 @@ const Index = () => {
                           <Typography component="h2" variant="h6">
                             Ph.D.
                           </Typography>
-                          <Typography color="textSecondary">
-                            2019 - Current
+                          <Typography
+                            color="textSecondary"
+                            className={classes.uthText}
+                          >
+                            Current
                           </Typography>
                         </TimelineOppositeContent>
                         <TimelineSeparator>
-                          <TimelineDot className={classes.uthDot} />
+                          <TimelineDot className={classes.uthDot}>
+                            {uthLogoEl}
+                          </TimelineDot>
                           <TimelineConnector className={classes.uthConnector} />
                         </TimelineSeparator>
                         <TimelineContent
@@ -693,11 +722,16 @@ const Index = () => {
                         >
                           <Card>
                             <CardContent
-                              className={[classes.uthDesc, classes.desc].join(
-                                " "
+                              className={mergeClasses(
+                                classes.uthDesc,
+                                classes.desc
                               )}
                             >
-                              <Typography variant="h6" component="h1">
+                              <Typography
+                                variant="h6"
+                                component="h2"
+                                className={classes.uthText}
+                              >
                                 A distributed IOT System that Utilizes FPGA, for
                                 Border and Edge Analytics, to Create a Smart,
                                 Autonomous and Secure Industrial Management
@@ -723,24 +757,43 @@ const Index = () => {
                           <Typography component="h2" variant="h6">
                             M.Sc.
                           </Typography>
-                          <Typography color="textSecondary">
-                            2012 - 2018
-                          </Typography>
                         </TimelineOppositeContent>
                         <TimelineSeparator>
-                          <TimelineDot className={classes.uthDot} />
+                          <TimelineDot
+                            className={mergeClasses(
+                              classes.uthDot,
+                              classes.timelineDotPlaceholder
+                            )}
+                          >
+                            {/* Placeholder DoT just for correct alignment */}
+                            {uthLogoEl}
+                          </TimelineDot>
+                          <Typography
+                            color="textSecondary"
+                            className={classes.uthText}
+                          >
+                            2018
+                          </Typography>
                           <TimelineConnector className={classes.uthConnector} />
                         </TimelineSeparator>
                         <TimelineContent
-                          className={classes.timelineRightContent}
+                          className={mergeClasses(
+                            classes.timelineRightContent,
+                            classes.timelineRightSubContent
+                          )}
                         >
                           <Card>
                             <CardContent
-                              className={[classes.uthDesc, classes.desc].join(
-                                " "
+                              className={mergeClasses(
+                                classes.uthDesc,
+                                classes.desc
                               )}
                             >
-                              <Typography variant="h6" component="h1">
+                              <Typography
+                                variant="h6"
+                                component="h2"
+                                className={classes.uthText}
+                              >
                                 <Link
                                   href="https://www.e-ce.uth.gr/"
                                   color="inherit"
@@ -761,6 +814,38 @@ const Index = () => {
                             </CardContent>
                           </Card>
                         </TimelineContent>
+                      </TimelineItem>
+                      <TimelineItem>
+                        <TimelineOppositeContent
+                          className={mergeClasses(
+                            classes.timelineLeftContent,
+                            classes.timelineTitlePlaceholder
+                          )}
+                        >
+                          <Typography component="h2" variant="h6">
+                            Uth..
+                          </Typography>
+                        </TimelineOppositeContent>
+                        <TimelineSeparator>
+                          <TimelineDot
+                            className={mergeClasses(
+                              classes.uthDot,
+                              classes.timelineDotPlaceholder
+                            )}
+                          >
+                            {/* Placeholder DoT just for correct alignment */}
+                            {uthLogoEl}
+                          </TimelineDot>
+                          <Typography
+                            color="textSecondary"
+                            className={classes.uthText}
+                          >
+                            2012
+                          </Typography>
+                        </TimelineSeparator>
+                        <TimelineContent
+                          className={classes.timelineRightContent}
+                        ></TimelineContent>
                       </TimelineItem>
                     </Timeline>
                   </CardContent>
