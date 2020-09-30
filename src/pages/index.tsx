@@ -62,11 +62,7 @@ const skills: Skill[] = [
       {
         label: "NodeJS/Typescript",
         shown: true,
-        children: [
-          {label: "Express"},
-          {label: "Loopback"},
-          {label: "Electron"},
-        ],
+        children: [{label: "Express"}, {label: "Loopback"}],
       },
       {label: "C"},
       {label: "Python (Django, TensorFlow)"},
@@ -85,6 +81,7 @@ const skills: Skill[] = [
           {label: "React/AngularJS"},
           {label: "Material/Grommet"},
           {label: "Redux"},
+          {label: "Electron"},
         ],
       },
       {label: "HTML (pug)"},
