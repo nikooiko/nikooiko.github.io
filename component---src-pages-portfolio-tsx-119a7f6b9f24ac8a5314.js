@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[6],{OQOg:function(t,e,n){"use strict";n.r(e),n.d(e,"default",(function(){return l}));var o=n("q1tI"),r=n.n(o),a=n("soUV"),i=n("hlFM");function l(){return r.a.createElement(a.a,{title:"Portfolio"},r.a.createElement(i.a,{display:"flex",flexGrow:1,justifyContent:"center"},"Portfolio"))}}}]);
+//# sourceMappingURL=component---src-pages-portfolio-tsx-119a7f6b9f24ac8a5314.js.map
