@@ -37,6 +37,7 @@ import NodeJS from "../images/technologies/nodejs_logo.png";
 import MongoDB from "../images/technologies/mongodb_logo.png";
 import Loopback from "../images/technologies/lb_logo.png";
 import ZephyrOS from "../images/technologies/zephyr_logo.png";
+import K8S from "../images/technologies/k8s_logo.png";
 
 import BreakColumn from "../components/BreakColumn";
 import {
@@ -46,7 +47,7 @@ import {
   mergeClasses,
 } from "../helpers";
 
-const centaurTitle = "Senior Software Engineer";
+const centaurTitle = "Director Of Engineering";
 
 interface Skill {
   label: string;
@@ -91,20 +92,23 @@ const skills: Skill[] = [
     ],
   },
   {
-    label: "Mobile",
-    children: [{label: "react-native"}, {label: "firestore"}],
-  },
-  {
     label: "Databases",
     children: [{label: "MongoDB"}, {label: "LinvoDB"}],
   },
   {
     label: "Testing",
+    children: [{label: "Mocha/Chai/Sinon"}, {label: "Jasmine"}],
+  },
+  {
+    label: "DevOps",
+    shown: true,
     children: [
-      {label: "Mocha"},
-      {label: "Chai"},
-      {label: "Sinon"},
-      {label: "Jasmine"},
+      {label: "Docker"},
+      {label: "K8S/Kops/Helm"},
+      {label: "AWS"},
+      {label: "Azure + AKS"},
+      {label: "gitlab-ci"},
+      {label: "Make/CMake/ninja"},
     ],
   },
   {
@@ -116,17 +120,13 @@ const skills: Skill[] = [
     ],
   },
   {
-    label: "Automation",
-    children: [
-      {label: "Docker"},
-      {label: "gitlab-ci"},
-      {label: "Make/CMake/ninja"},
-      {label: "Yocto Linux"},
-    ],
+    label: "Mobile",
+    children: [{label: "react-native"}, {label: "firestore"}],
   },
   {
     label: "Embedded OS",
     children: [
+      {label: "Yocto Linux"},
       {label: "ZephyrOS"},
       {label: "ContikiOS"},
       {label: "FreeRTOS"},
@@ -309,9 +309,8 @@ const Index = () => {
                   Summary
                 </Typography>
                 <Typography variant="h6" component="h2" gutterBottom>
-                  <b>Senior Software Engineer</b> at{" "}
-                  <i>Centaur Analytics Inc</i>. and <b>PhD candidate</b> at{" "}
-                  <i>University of Thessaly</i>.
+                  <b>{centaurTitle}</b> at <i>Centaur Analytics Inc</i>. and{" "}
+                  <b>Ph.D. candidate</b> at <i>University of Thessaly</i>.
                 </Typography>
                 <Typography style={{textAlign: "justify"}}>
                   I have experience as a full-stack web developer and as an
@@ -418,7 +417,7 @@ const Index = () => {
                                 </Link>
                               </Typography>
                               <Typography variant="subtitle2" component="h2">
-                                NodeJS (MEAN Stack), C (ZephyrOS)
+                                NodeJS (MEAN Stack), C (ZephyrOS), K8S
                               </Typography>
                               <Grid
                                 direction="row"
@@ -504,28 +503,128 @@ const Index = () => {
                                     </Link>
                                   </Tooltip>
                                 </Grid>
+                                <Grid
+                                  item
+                                  className={classes.technologyWrapper}
+                                >
+                                  <Tooltip
+                                    title="Kubernetes"
+                                    aria-label="kubernetes"
+                                  >
+                                    <Link
+                                      href="https://kubernetes.io/"
+                                      target="_blank"
+                                    >
+                                      <Avatar
+                                        alt="K8S"
+                                        src={K8S}
+                                        className={classes.technology}
+                                      />
+                                    </Link>
+                                  </Tooltip>
+                                </Grid>
                               </Grid>
                               <br />
                               <Typography>
-                                From 2018, I'm a senior software engineer
-                                leading Centaur’s embedded team while
-                                occasionally supporting the web team by taking
+                                In 2021, I became Centaur's Director Of
+                                Engineering in charge of leading the Centaur's
+                                R&D department. I'm responsible for leading the
+                                Product Development process and orchestrating
+                                the entire team's task workflow.
+                              </Typography>
+                              <br />
+                              <Typography>
+                                With the help of our team, I started scaling our
+                                department by adding more members to it and I
+                                worked closely with all team leads to make sure
+                                we identify and understand any personal or team
+                                problem and try to resolve it as fast as
+                                possible.
+                              </Typography>
+                              <br />
+                              <Typography>
+                                Finally, as I was already experienced with
+                                Centaur's cloud infrastructure I started working
+                                with our DevOps team to identify and resolve
+                                cluster and deployment issues. To make our cloud
+                                more stable and easier to monitor and at the
+                                same time build my DevOps knowledge, I started
+                                upgrading our technology to use more modern
+                                tools and versions and moved our cluster from
+                                self-managed to provider-managed.
+                              </Typography>
+                            </CardContent>
+                          </Card>
+                        </TimelineContent>
+                      </TimelineItem>
+                      <TimelineItem>
+                        <TimelineOppositeContent
+                          className={classes.timelineLeftContent}
+                        >
+                          <Typography
+                            component="h2"
+                            variant="h6"
+                            className={mergeClasses(
+                              classes.centaurTitle,
+                              classes.timelineTitlePlaceholder
+                            )}
+                          >
+                            {centaurTitle}
+                          </Typography>
+                        </TimelineOppositeContent>
+                        <TimelineSeparator>
+                          <TimelineDot
+                            className={mergeClasses(
+                              classes.centaurDot,
+                              classes.timelineDotPlaceholder
+                            )}
+                          >
+                            {/* Placeholder DoT just for correct alignment */}
+                            {centaurLogoEl}
+                          </TimelineDot>
+                          <Typography
+                            color="textSecondary"
+                            className={classes.centaurLightText}
+                          >
+                            2021
+                          </Typography>
+                          <TimelineConnector
+                            className={classes.centaurConnector}
+                          />
+                        </TimelineSeparator>
+                        <TimelineContent
+                          className={mergeClasses(
+                            classes.timelineRightContent,
+                            classes.timelineRightSubContent
+                          )}
+                        >
+                          <Card>
+                            <CardContent
+                              className={mergeClasses(
+                                classes.centaurDesc,
+                                classes.desc
+                              )}
+                            >
+                              <Typography>
+                                In 2018, I became a senior software engineer and
+                                leader of Centaur’s embedded team and in
+                                parallel I was supporting the web team by taking
                                 some load off of their hands when a critical
-                                deadline approaches. This allows me to rapidly
+                                deadline approached. This allowed me to rapidly
                                 create truly end-to-end solutions, ranging from
                                 the embedded device to the client application.
                               </Typography>
                               <br />
                               <Typography>
-                                I am also responsible for managing the backlog,
+                                I was also responsible for managing the backlog,
                                 coordinating the team, and interviewing/training
                                 new team members.
                               </Typography>
                               <br />
                               <Typography>
-                                Occasionally, on the side, I am supporting the
+                                Occasionally, on the side, I was supporting the
                                 field engineers, and sometimes I directly
-                                communicate with the clients to resolve their
+                                communicated with the clients to resolve their
                                 issues.
                               </Typography>
                             </CardContent>
@@ -582,8 +681,11 @@ const Index = () => {
                             >
                               <Typography>
                                 After my first year at centaur, I started
-                                working with the IoT devices to support the
-                                embedded team.
+                                working with IoT devices to support the embedded
+                                team. I initially participated as a secondary
+                                developer for the software of the IP-enabled
+                                devices but I quickly took the lead of all the
+                                software and firmware layers for such devices.
                               </Typography>
                             </CardContent>
                           </Card>
@@ -640,7 +742,12 @@ const Index = () => {
                               <Typography>
                                 In 2016 I joined the web app team, as a
                                 full-stack developer, to work with Centaur’s
-                                cloud services.
+                                cloud services. My responsibilities included
+                                both back-end and front-end development, but I
+                                focused more on the back-end working with its
+                                architecture and migrating from monolith to
+                                microservices to build a more scalable cloud
+                                infrastructure.
                               </Typography>
                             </CardContent>
                           </Card>
