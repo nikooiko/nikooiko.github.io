@@ -1,5 +1,11 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
 import { format, formatDuration, intervalToDuration } from "date-fns";
 import { type PageProps } from "gatsby";
@@ -9,6 +15,15 @@ import CentaurLogo from "../images/centaur_logo.png";
 import UthLogo from "../images/ece_uth_logo.png";
 import KarieraLogo from "../images/kariera_group_logo.png";
 import Me from "../images/me.jpeg";
+import AngularJS from "../images/technologies/angularjs_logo.png";
+import Kubernetes from "../images/technologies/k8s_logo.png";
+import Loopback from "../images/technologies/lb_logo.png";
+import MongoDB from "../images/technologies/mongodb_logo.png";
+import NestJS from "../images/technologies/nestjs_logo.png";
+import NextJS from "../images/technologies/nextjs_logo.png";
+import NodeJS from "../images/technologies/nodejs_logo.png";
+import PostgreSQL from "../images/technologies/postgres_logo.png";
+import Zephyr from "../images/technologies/zephyr_logo.png";
 
 type TimelineEntryProps = {
   link: string;
@@ -20,6 +35,7 @@ type TimelineEntryProps = {
   start: Date;
   skipDuration?: boolean;
   what: React.ReactNode;
+  technologies?: { link: string; icon: string; name: string }[];
   history?: { as: string; start: Date; end: Date; what: React.ReactNode }[];
 };
 
@@ -33,6 +49,7 @@ const TimelineEntry: React.FC<TimelineEntryProps> = ({
   logo,
   logoClasses,
   link,
+  technologies,
   history,
 }) => {
   return (
@@ -58,10 +75,35 @@ const TimelineEntry: React.FC<TimelineEntryProps> = ({
       </time>
       <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
         {as} @{" "}
-        <a href={link} className="hover:underline">
+        <a href={link} className="hover:underline" target="_blank">
           {at}
         </a>
       </h3>
+      {technologies && (
+        <div className="flex flex-row gap-2 flex-wrap justify-between">
+          {technologies.map(({ link, icon, name }) => (
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <a href={link} target="_blank">
+                    <img
+                      className="rounded-full w-16 h-16"
+                      src={icon}
+                      alt={link}
+                    />
+                  </a>
+                </TooltipTrigger>
+                <TooltipContent
+                  side="bottom"
+                  className="py-0 px-2 dark:bg-gray-500 dark:text-white"
+                >
+                  {name}
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
+          ))}
+        </div>
+      )}
       <div className="text-base font-normal text-gray-500 dark:text-gray-400">
         {what}
       </div>
@@ -109,6 +151,33 @@ const experience: TimelineEntryProps[] = [
       </p>
     ),
     link: "https://www.karieragroup.com/",
+    technologies: [
+      {
+        link: "https://nodejs.org/",
+        icon: NodeJS,
+        name: "NodeJS",
+      },
+      {
+        link: "https://nestjs.com/",
+        icon: NestJS,
+        name: "NestJS",
+      },
+      {
+        link: "https://www.postgresql.org/",
+        icon: PostgreSQL,
+        name: "PostgreSQL",
+      },
+      {
+        link: "https://nextjs.org/",
+        icon: NextJS,
+        name: "NextJS",
+      },
+      {
+        link: "https://kubernetes.io/",
+        icon: Kubernetes,
+        name: "Kubernetes",
+      },
+    ],
     history: [
       {
         as: "Tech Lead",
@@ -175,6 +244,38 @@ const experience: TimelineEntryProps[] = [
       </>
     ),
     link: "https://www.centaur.ag/",
+    technologies: [
+      {
+        link: "https://nodejs.org/",
+        icon: NodeJS,
+        name: "NodeJS",
+      },
+      {
+        link: "https://loopback.io/lb3",
+        icon: Loopback,
+        name: "Loopback",
+      },
+      {
+        link: "https://www.mongodb.com/",
+        icon: MongoDB,
+        name: "MongoDB",
+      },
+      {
+        link: "https://angularjs.org/",
+        icon: AngularJS,
+        name: "AngularJS",
+      },
+      {
+        link: "https://kubernetes.io/",
+        icon: Kubernetes,
+        name: "Kubernetes",
+      },
+      {
+        link: "https://www.zephyrproject.org/",
+        icon: Zephyr,
+        name: "ZephyrOS",
+      },
+    ],
     history: [
       {
         as: "Senior Software Engineer",
@@ -242,7 +343,11 @@ const education: TimelineEntryProps[] = [
     start: new Date("2012-09-15T12:00:00.000Z"),
     what: (
       <>
-        <a href="https://www.e-ce.uth.gr/" className="hover:underline">
+        <a
+          href="https://www.e-ce.uth.gr/"
+          className="hover:underline"
+          target="_blank"
+        >
           Electrical and Computer Engineering.
         </a>
         <p className="mt-4 text-justify">
@@ -273,10 +378,10 @@ const IndexPage: React.FC<PageProps> = () => {
               <AvatarFallback>NO</AvatarFallback>
             </Avatar>
             <div className="flex flex-row justify-around mt-4">
-              <a href="https://github.com/nikooiko">
+              <a href="https://github.com/nikooiko" target="_blank">
                 <Github size="32" />
               </a>
-              <a href="https://medium.com/@nikoikonomou92">
+              <a href="https://medium.com/@nikoikonomou92" target="_blank">
                 <svg viewBox="0 0 1043.63 592.71" className="w-8 h-8">
                   <g data-name="Layer 2">
                     <g data-name="Layer 1">
@@ -285,7 +390,10 @@ const IndexPage: React.FC<PageProps> = () => {
                   </g>
                 </svg>
               </a>
-              <a href="https://www.linkedin.com/in/nikos-oikonomou/">
+              <a
+                href="https://www.linkedin.com/in/nikos-oikonomou/"
+                target="_blank"
+              >
                 <Linkedin size="32" />
               </a>
             </div>
@@ -302,7 +410,10 @@ const IndexPage: React.FC<PageProps> = () => {
               Group, a global HR solution provider.
             </p>
             <Button asChild className="mt-2">
-              <a href="https://www.linkedin.com/in/nikos-oikonomou/">
+              <a
+                href="https://www.linkedin.com/in/nikos-oikonomou/"
+                target="_blank"
+              >
                 GET IN TOUCH
               </a>
             </Button>
