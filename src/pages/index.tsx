@@ -368,10 +368,10 @@ const education: TimelineEntryProps[] = [
   },
 ];
 
-const IndexPage: React.FC<PageProps> = () => {
+const IndexPage: React.FC<PageProps> = ({ location }) => {
   return (
-    <Layout>
-      <section className="p-8 flex flex-col sm:flex-row justify-start sm:justify-center items-center gap-4 sm:gap-8 sm:my-8">
+    <Layout activePath={location.pathname}>
+      <section className="p-4 flex flex-col sm:flex-row justify-start sm:justify-center items-center gap-4 sm:gap-8">
         <div className="flex flex-col justify-center w-fit h-fit">
           <Avatar className="h-36 w-36">
             <AvatarImage src={Me} />
