@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import { Link } from "gatsby";
 import * as React from "react";
 
 export const Layout: React.FC<{
@@ -14,9 +15,9 @@ export const Layout: React.FC<{
       <div className="w-full flex flex-col justify-center items-center max-w-xl">
         <div className="flex p-2 gap-2 w-full border-b border-divider">
           {links.map((link) => (
-            <a
+            <Link
               key={link.href}
-              href={link.href}
+              to={link.href}
               className={cn(
                 "font-medium py-2",
                 activePath === link.href
@@ -25,7 +26,7 @@ export const Layout: React.FC<{
               )}
             >
               {link.label}
-            </a>
+            </Link>
           ))}
         </div>
         {children}
