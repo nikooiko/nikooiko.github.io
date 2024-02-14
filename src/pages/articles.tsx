@@ -10,7 +10,7 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
   React.useEffect(() => {
     async function fetchData() {
       try {
-        const res = await fetch("/api/articles");
+        const res = await fetch("https://www.dtp-toolbox.com/api/articles");
         const articles: Article[] = (await res.json())?.items || [];
         setArticles(articles);
       } catch (error) {
