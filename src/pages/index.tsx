@@ -1,6 +1,7 @@
 import { Layout } from "@/components/Layout";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
+import { Progress } from "@/components/ui/progress";
 import {
   Tooltip,
   TooltipContent,
@@ -10,9 +11,30 @@ import {
 import { cn } from "@/lib/utils";
 import { format, formatDuration, intervalToDuration } from "date-fns";
 import { type PageProps } from "gatsby";
-import { Github, Linkedin } from "lucide-react";
+import {
+  ChefHat,
+  Gamepad2,
+  Github,
+  Linkedin,
+  Luggage,
+  NotebookPen,
+} from "lucide-react";
 import * as React from "react";
 import CentaurLogo from "../images/centaur_logo.png";
+import AT from "../images/countries/at.inline.svg";
+import BE from "../images/countries/be.inline.svg";
+import BG from "../images/countries/bg.inline.svg";
+import DE from "../images/countries/de.inline.svg";
+import FI from "../images/countries/fi.inline.svg";
+import GR from "../images/countries/gr.inline.svg";
+import HU from "../images/countries/hu.inline.svg";
+import IT from "../images/countries/it.inline.svg";
+import MK from "../images/countries/mk.inline.svg";
+import NL from "../images/countries/nl.inline.svg";
+import PL from "../images/countries/pl.inline.svg";
+import RO from "../images/countries/ro.inline.svg";
+import SE from "../images/countries/se.inline.svg";
+import US from "../images/countries/us.inline.svg";
 import UthLogo from "../images/ece_uth_logo.png";
 import KarieraLogo from "../images/kariera_group_logo.png";
 import Me from "../images/me.jpeg";
@@ -183,7 +205,7 @@ const experience: TimelineEntryProps[] = [
       {
         as: "Tech Lead",
         end: new Date("2023-11-01T12:00:00.000Z"),
-        start: new Date("2022-07-01T12:00:00.000Z"),
+        start: new Date("2022-07-15T12:00:00.000Z"),
         what: (
           <p className="text-justify">
             Not much later on, I assumed the role of Tech Lead. My main focus
@@ -198,7 +220,7 @@ const experience: TimelineEntryProps[] = [
       },
       {
         as: "Senior Backend Engineer",
-        end: new Date("2022-07-01T12:00:00.000Z"),
+        end: new Date("2022-07-15T12:00:00.000Z"),
         start: new Date("2022-01-15T12:00:00.000Z"),
         what: (
           <p className="text-justify">
@@ -368,6 +390,65 @@ const education: TimelineEntryProps[] = [
   },
 ];
 
+const countries = [
+  {
+    name: "Greece",
+    Flag: GR,
+  },
+  {
+    name: "USA",
+    Flag: US,
+  },
+  {
+    name: "Austria",
+    Flag: AT,
+  },
+  {
+    name: "Belgium",
+    Flag: BE,
+  },
+  {
+    name: "Bulgaria",
+    Flag: BG,
+  },
+  {
+    name: "Germany",
+    Flag: DE,
+  },
+  {
+    name: "Finland",
+    Flag: FI,
+  },
+  {
+    name: "Hungary",
+    Flag: HU,
+  },
+  {
+    name: "Italy",
+    Flag: IT,
+  },
+  {
+    name: "North Macedonia",
+    Flag: MK,
+  },
+  {
+    name: "Netherlands",
+    Flag: NL,
+  },
+  {
+    name: "Poland",
+    Flag: PL,
+  },
+  {
+    name: "Romania",
+    Flag: RO,
+  },
+  {
+    name: "Sweden",
+    Flag: SE,
+  },
+];
+
 const IndexPage: React.FC<PageProps> = ({ location }) => {
   return (
     <Layout activePath={location.pathname}>
@@ -423,15 +504,72 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
         <h2 className="text-2xl font-bold py-2">Work Experience</h2>
         <ol className="relative border-s border-gray-200 dark:border-gray-700 ml-4">
           {experience.map((e, i) => (
-            <TimelineEntry key={i} {...e} />
+            <TimelineEntry key={`exp-${i}`} {...e} />
           ))}
         </ol>
         <h2 className="text-2xl font-bold py-2 mt-8">Education</h2>
         <ol className="relative border-s border-gray-200 dark:border-gray-700 ml-4">
           {education.map((e, i) => (
-            <TimelineEntry key={i} {...e} />
+            <TimelineEntry key={`edu-${i}`} {...e} />
           ))}
         </ol>
+        <div>
+          <div>
+            <h2 className="text-2xl font-bold py-2 mt-8">Hobbies</h2>
+            <div className="flex flex-row gap-1 items-center">
+              <Luggage className="w-8" />
+              <h3 className="text-xl pr-1">Traveling</h3>
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <div className="flex-grow flex justify-center">
+                      <Progress
+                        value={Math.round((countries.length / 195) * 100)}
+                        className="max-w-64"
+                      />
+                    </div>
+                  </TooltipTrigger>
+                  <TooltipContent
+                    side="bottom"
+                    className="py-0 px-2 dark:bg-gray-500 dark:text-white"
+                  >
+                    {countries.length} out of 195 countries visited
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+            </div>
+            <div className="flex flex-wrap gap-1 pt-1">
+              {countries.map(({ name, Flag }) => (
+                <TooltipProvider key={name}>
+                  <Tooltip>
+                    <TooltipTrigger>
+                      <Flag className="h-6" />
+                    </TooltipTrigger>
+                    <TooltipContent
+                      side="bottom"
+                      className="py-0 px-2 dark:bg-gray-500 dark:text-white"
+                    >
+                      {name}
+                    </TooltipContent>
+                  </Tooltip>
+                </TooltipProvider>
+              ))}
+            </div>
+          </div>
+
+          <div className="flex flex-row gap-1 items-center mt-2">
+            <ChefHat className="w-8" />
+            <h3 className="text-xl pr-1">Cooking</h3>
+          </div>
+          <div className="flex flex-row gap-1 items-center">
+            <Gamepad2 className="w-8" />
+            <h3 className="text-xl pr-1">Gaming</h3>
+          </div>
+          <div className="flex flex-row gap-1 items-center">
+            <NotebookPen className="w-8" />
+            <h3 className="text-xl pr-1">Writing</h3>
+          </div>
+        </div>
       </section>
     </Layout>
   );

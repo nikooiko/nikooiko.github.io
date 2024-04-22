@@ -35,6 +35,14 @@ const config: GatsbyConfig = {
       },
       __key: "images",
     },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /\.inline\.svg$/,
+        },
+      },
+    },
   ],
 };
 
