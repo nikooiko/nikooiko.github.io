@@ -158,7 +158,7 @@ const TimelineEntry: React.FC<TimelineEntryProps> = ({
 
 const experience: TimelineEntryProps[] = [
   {
-    as: "Director of Engineering",
+    as: "Principal Engineer",
     at: "Kariera Group",
     logo: KarieraLogo,
     logoClasses: "bg-white",
@@ -484,11 +484,11 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
             Hello I'm <b>Nikos Oikonomou</b>!
           </h1>
           <p className="text-justify">
-            I'm an seasoned software engineer with a strong background in Web
-            Development and IoT. I'm more focused on the back-end but I like to
-            contribute to any part of the stack. I'm currently working as a
-            Director of Engineering leading the engineering teams of Kariera
-            Group, a global HR solution provider.
+            I'm a seasoned software engineer with a strong Web Development and
+            IoT background. I'm more focused on the back end but I like
+            contributing to any part of the stack. I'm currently a Principal
+            Engineer leading the engineering teams of Kariera Group, a global HR
+            solution provider.
           </p>
           <Button asChild className="mt-2">
             <a
