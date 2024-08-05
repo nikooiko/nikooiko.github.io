@@ -24,6 +24,7 @@ import CentaurLogo from "../images/centaur_logo.png";
 import AT from "../images/countries/at.inline.svg";
 import BE from "../images/countries/be.inline.svg";
 import BG from "../images/countries/bg.inline.svg";
+import CH from "../images/countries/ch.inline.svg";
 import DE from "../images/countries/de.inline.svg";
 import FI from "../images/countries/fi.inline.svg";
 import GR from "../images/countries/gr.inline.svg";
@@ -446,6 +447,10 @@ const countries = [
   {
     name: "Sweden",
     Flag: SE,
+  },
+  {
+    name: "Switzerland",
+    Flag: CH,
   },
 ];
 
