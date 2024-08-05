@@ -1,7 +1,6 @@
 import { Layout } from "@/components/Layout";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
-import { Progress } from "@/components/ui/progress";
 import {
   Tooltip,
   TooltipContent,
@@ -523,27 +522,11 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
             <h2 className="text-2xl font-bold py-2 mt-8">Hobbies</h2>
             <div className="flex flex-row gap-1 items-center">
               <Luggage className="w-8" />
-              <h3 className="text-xl pr-1">Traveling</h3>
-              <TooltipProvider>
-                <Tooltip>
-                  <TooltipTrigger asChild>
-                    <div className="flex-grow flex justify-center">
-                      <Progress
-                        value={Math.round((countries.length / 195) * 100)}
-                        className="max-w-64"
-                      />
-                    </div>
-                  </TooltipTrigger>
-                  <TooltipContent
-                    side="bottom"
-                    className="py-0 px-2 dark:bg-gray-500 dark:text-white"
-                  >
-                    {countries.length} out of 195 countries visited
-                  </TooltipContent>
-                </Tooltip>
-              </TooltipProvider>
+              <h3 className="text-xl pr-1">
+                Traveling ({countries.length} of 195)
+              </h3>
             </div>
-            <div className="flex flex-wrap gap-1 pt-1">
+            <div className="flex flex-wrap gap-1 pt-1 pl-1">
               {countries.map(({ name, Flag }) => (
                 <TooltipProvider key={name}>
                   <Tooltip>
