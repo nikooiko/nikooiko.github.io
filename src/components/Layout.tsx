@@ -12,8 +12,8 @@ export const Layout: React.FC<{
   ];
   return (
     <main className="flex flex-col justify-center items-center w-full h-full">
-      <div className="w-full flex flex-col justify-center items-center max-w-xl">
-        <div className="flex p-2 gap-2 w-full border-b border-divider">
+      <div className="w-full flex flex-col justify-center items-center">
+        <div className="flex p-2 gap-2 w-full border-b border-divider max-w-xl">
           {links.map((link) => (
             <Link
               key={link.href}
