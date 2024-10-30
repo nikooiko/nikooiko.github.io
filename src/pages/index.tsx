@@ -34,6 +34,7 @@ import NL from "../images/countries/nl.inline.svg";
 import PL from "../images/countries/pl.inline.svg";
 import RO from "../images/countries/ro.inline.svg";
 import SE from "../images/countries/se.inline.svg";
+import SK from "../images/countries/sk.inline.svg";
 import US from "../images/countries/us.inline.svg";
 import UthLogo from "../images/ece_uth_logo.png";
 import KarieraLogo from "../images/kariera_group_logo.png";
@@ -209,12 +210,11 @@ const experience: TimelineEntryProps[] = [
         what: (
           <p className="text-justify">
             Not much later on, I assumed the role of Tech Lead. My main focus
-            was to lead the development of the backend services and to help the
-            team to build a scalable and reliable platform. I was also
-            responsible for the architecture and the design of the backend
-            services and I was working closely with the product team to
-            understand the business requirements and to translate them into
-            technical requirements.
+            was to lead the development of the backend services and help the
+            team build a scalable and reliable platform. I was also responsible
+            for the architecture and the design of the backend services and I
+            was working closely with the product team to understand the business
+            requirements and translate them into technical requirements.
           </p>
         ),
       },
@@ -450,6 +450,10 @@ const countries = [
   {
     name: "Switzerland",
     Flag: CH,
+  },
+  {
+    name: "Slovakia",
+    Flag: SK,
   },
 ];
 
