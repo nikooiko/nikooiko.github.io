@@ -19,7 +19,6 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
             const imageURL = imageURLRootEl
               ?.getElementsByTagName("img")[0]
               ?.getAttribute("src");
-            console.log("ts", rawArticle.publishedAt);
             const shortHTML = el.getElementsByClassName(
               "medium-feed-snippet"
             )[0]?.innerHTML;
