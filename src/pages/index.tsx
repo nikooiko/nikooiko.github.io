@@ -106,7 +106,7 @@ const TimelineEntry: React.FC<TimelineEntryProps> = ({
       {technologies && (
         <div className="flex flex-row gap-2 flex-wrap justify-between">
           {technologies.map(({ link, icon, name }) => (
-            <TooltipProvider>
+            <TooltipProvider key={name}>
               <Tooltip>
                 <TooltipTrigger asChild>
                   <a href={link} target="_blank">
@@ -132,7 +132,7 @@ const TimelineEntry: React.FC<TimelineEntryProps> = ({
         {what}
       </div>
       {history?.map((h) => (
-        <>
+        <React.Fragment key={h.start.toISOString()}>
           <div className="h-4" />
           <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-8 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700" />
           <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
@@ -151,7 +151,7 @@ const TimelineEntry: React.FC<TimelineEntryProps> = ({
           <div className=" text-base font-normal text-gray-500 dark:text-gray-400">
             {h.what}
           </div>
-        </>
+        </React.Fragment>
       ))}
     </li>
   );
