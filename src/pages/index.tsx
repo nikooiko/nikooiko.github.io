@@ -75,7 +75,7 @@ const TimelineEntry: React.FC<TimelineEntryProps> = ({
       >
         {logo}
       </span>
-      <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+      <time className="mb-1 text-sm font-normal leading-none text-gray-500 dark:text-gray-500">
         {format(start, "MMM. yyyy")} -{" "}
         {end ? format(end, "MMM. yyyy") : "Present"}
         {!skipDuration &&
@@ -120,7 +120,7 @@ const TimelineEntry: React.FC<TimelineEntryProps> = ({
         <React.Fragment key={h.start.toISOString()}>
           <div className="h-4" />
           <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-8 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700" />
-          <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+          <time className="mb-1 text-sm font-normal leading-none text-gray-500 dark:text-gray-500">
             {format(h.start, "MMM. yyyy")} - {format(h.end, "MMM. yyyy")} (
             {formatDuration(
               intervalToDuration({ start: h.start, end: h.end }),
