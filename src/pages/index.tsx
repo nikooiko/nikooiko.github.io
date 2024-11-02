@@ -10,6 +10,7 @@ import {
 import { cn } from "@/lib/utils";
 import { format, formatDuration, intervalToDuration } from "date-fns";
 import { type PageProps } from "gatsby";
+import { StaticImage } from "gatsby-plugin-image";
 import {
   ChefHat,
   Gamepad2,
@@ -19,7 +20,6 @@ import {
   NotebookPen,
 } from "lucide-react";
 import * as React from "react";
-import CentaurLogo from "../images/centaur_logo.png";
 import AT from "../images/countries/at.inline.svg";
 import BE from "../images/countries/be.inline.svg";
 import BG from "../images/countries/bg.inline.svg";
@@ -36,22 +36,11 @@ import RO from "../images/countries/ro.inline.svg";
 import SE from "../images/countries/se.inline.svg";
 import SK from "../images/countries/sk.inline.svg";
 import US from "../images/countries/us.inline.svg";
-import UthLogo from "../images/ece_uth_logo.png";
-import KarieraLogo from "../images/kariera_group_logo.png";
 import Me from "../images/me.jpeg";
-import AngularJS from "../images/technologies/angularjs_logo.png";
-import Kubernetes from "../images/technologies/k8s_logo.png";
-import Loopback from "../images/technologies/lb_logo.png";
-import MongoDB from "../images/technologies/mongodb_logo.png";
-import NestJS from "../images/technologies/nestjs_logo.png";
-import NextJS from "../images/technologies/nextjs_logo.png";
-import NodeJS from "../images/technologies/nodejs_logo.png";
-import PostgreSQL from "../images/technologies/postgres_logo.png";
-import Zephyr from "../images/technologies/zephyr_logo.png";
 
 type TimelineEntryProps = {
   link: string;
-  logo: string;
+  logo: React.ReactNode;
   logoClasses?: string;
   as: string;
   at: string;
@@ -59,7 +48,7 @@ type TimelineEntryProps = {
   start: Date;
   skipDuration?: boolean;
   what: React.ReactNode;
-  technologies?: { link: string; icon: string; name: string }[];
+  technologies?: { link: string; icon: React.ReactNode; name: string }[];
   history?: { as: string; start: Date; end: Date; what: React.ReactNode }[];
 };
 
@@ -84,7 +73,7 @@ const TimelineEntry: React.FC<TimelineEntryProps> = ({
           logoClasses
         )}
       >
-        <img className="rounded-full" src={logo} alt="Logo" />
+        {logo}
       </span>
       <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
         {format(start, "MMM. yyyy")} -{" "}
@@ -110,11 +99,7 @@ const TimelineEntry: React.FC<TimelineEntryProps> = ({
               <Tooltip>
                 <TooltipTrigger asChild>
                   <a href={link} target="_blank">
-                    <img
-                      className="rounded-full w-16 h-16"
-                      src={icon}
-                      alt={link}
-                    />
+                    {icon}
                   </a>
                 </TooltipTrigger>
                 <TooltipContent
@@ -157,11 +142,25 @@ const TimelineEntry: React.FC<TimelineEntryProps> = ({
   );
 };
 
+const experienceLogoProps = {
+  className: "rounded-full",
+  width: 48,
+};
+const technologiesIconProps = {
+  className: "rounded-full",
+  width: 64,
+};
 const experience: TimelineEntryProps[] = [
   {
     as: "Principal Engineer",
     at: "Kariera Group",
-    logo: KarieraLogo,
+    logo: (
+      <StaticImage
+        src="../images/kariera_group_logo.png"
+        alt="kariera group"
+        {...experienceLogoProps}
+      />
+    ),
     logoClasses: "bg-white",
     start: new Date("2023-11-01T12:00:00.000Z"),
     what: (
@@ -178,27 +177,57 @@ const experience: TimelineEntryProps[] = [
     technologies: [
       {
         link: "https://nodejs.org/",
-        icon: NodeJS,
+        icon: (
+          <StaticImage
+            src="../images/technologies/nodejs_logo.png"
+            alt="NodeJS"
+            {...technologiesIconProps}
+          />
+        ),
         name: "NodeJS",
       },
       {
         link: "https://nestjs.com/",
-        icon: NestJS,
+        icon: (
+          <StaticImage
+            src="../images/technologies/nestjs_logo.png"
+            alt="NestJS"
+            {...technologiesIconProps}
+          />
+        ),
         name: "NestJS",
       },
       {
         link: "https://www.postgresql.org/",
-        icon: PostgreSQL,
+        icon: (
+          <StaticImage
+            src="../images/technologies/postgres_logo.png"
+            alt="postgres"
+            {...technologiesIconProps}
+          />
+        ),
         name: "PostgreSQL",
       },
       {
         link: "https://nextjs.org/",
-        icon: NextJS,
+        icon: (
+          <StaticImage
+            src="../images/technologies/nextjs_logo.png"
+            alt="nextjs"
+            {...technologiesIconProps}
+          />
+        ),
         name: "NextJS",
       },
       {
         link: "https://kubernetes.io/",
-        icon: Kubernetes,
+        icon: (
+          <StaticImage
+            src="../images/technologies/k8s_logo.png"
+            alt="k8s"
+            {...technologiesIconProps}
+          />
+        ),
         name: "Kubernetes",
       },
     ],
@@ -237,7 +266,13 @@ const experience: TimelineEntryProps[] = [
   {
     as: "Director of Engineering",
     at: "Centaur Analytics",
-    logo: CentaurLogo,
+    logo: (
+      <StaticImage
+        src="../images/centaur_logo.png"
+        alt="centaur"
+        {...experienceLogoProps}
+      />
+    ),
     logoClasses: `bg-[#3a3a3c]`,
     end: new Date("2022-01-15T12:00:00.000Z"),
     start: new Date("2021-03-01T12:00:00.000Z"),
@@ -270,32 +305,68 @@ const experience: TimelineEntryProps[] = [
     technologies: [
       {
         link: "https://nodejs.org/",
-        icon: NodeJS,
+        icon: (
+          <StaticImage
+            src="../images/technologies/nodejs_logo.png"
+            alt="nodejs"
+            {...technologiesIconProps}
+          />
+        ),
         name: "NodeJS",
       },
       {
         link: "https://loopback.io/lb3",
-        icon: Loopback,
+        icon: (
+          <StaticImage
+            src="../images/technologies/lb_logo.png"
+            alt="lb"
+            {...technologiesIconProps}
+          />
+        ),
         name: "Loopback",
       },
       {
         link: "https://www.mongodb.com/",
-        icon: MongoDB,
+        icon: (
+          <StaticImage
+            src="../images/technologies/mongodb_logo.png"
+            alt="mongodb"
+            {...technologiesIconProps}
+          />
+        ),
         name: "MongoDB",
       },
       {
         link: "https://angularjs.org/",
-        icon: AngularJS,
+        icon: (
+          <StaticImage
+            src="../images/technologies/angularjs_logo.png"
+            alt="angularjs"
+            {...technologiesIconProps}
+          />
+        ),
         name: "AngularJS",
       },
       {
         link: "https://kubernetes.io/",
-        icon: Kubernetes,
+        icon: (
+          <StaticImage
+            src="../images/technologies/k8s_logo.png"
+            alt="k8s"
+            {...technologiesIconProps}
+          />
+        ),
         name: "Kubernetes",
       },
       {
         link: "https://www.zephyrproject.org/",
-        icon: Zephyr,
+        icon: (
+          <StaticImage
+            src="../images/technologies/zephyr_logo.png"
+            alt="zephyr"
+            {...technologiesIconProps}
+          />
+        ),
         name: "ZephyrOS",
       },
     ],
@@ -360,7 +431,13 @@ const education: TimelineEntryProps[] = [
   {
     as: "M.Sc.",
     at: "University of Thessaly",
-    logo: UthLogo,
+    logo: (
+      <StaticImage
+        src="../images/ece_uth_logo.png"
+        alt="ece_uth"
+        {...experienceLogoProps}
+      />
+    ),
     logoClasses: "bg-white",
     end: new Date("2018-09-15T12:00:00.000Z"),
     start: new Date("2012-09-15T12:00:00.000Z"),
