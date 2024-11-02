@@ -49,4 +49,13 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
 
 export default IndexPage;
 
-export const Head = () => <title>Articles - Nikos Oikonomou</title>;
+export const Head = () => (
+  <>
+    <html lang="en" />
+    <title>Articles - Nikos Oikonomou</title>
+    <meta
+      name="description"
+      content="Articles written by Nikos Oikonomou. Provides the descriptions, images and the links of available articles. Mostly about backend using NodeJS/NestJS and web development in general"
+    />
+  </>
+);

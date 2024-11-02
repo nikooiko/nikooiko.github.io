@@ -98,7 +98,11 @@ const TimelineEntry: React.FC<TimelineEntryProps> = ({
             <TooltipProvider key={name}>
               <Tooltip>
                 <TooltipTrigger asChild>
-                  <a href={link} target="_blank">
+                  <a
+                    href={link}
+                    target="_blank"
+                    aria-label="Show technology name"
+                  >
                     {icon}
                   </a>
                 </TooltipTrigger>
@@ -540,14 +544,22 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
       <section className="p-4 flex flex-col sm:flex-row justify-start sm:justify-center items-center gap-4 sm:gap-8 max-w-xl">
         <div className="flex flex-col justify-center w-fit h-fit">
           <Avatar className="h-36 w-36">
-            <AvatarImage src={Me} />
-            <AvatarFallback>NO</AvatarFallback>
+            <AvatarImage src={Me} alt="Me" />
+            <AvatarFallback>Me</AvatarFallback>
           </Avatar>
           <div className="flex flex-row justify-around mt-4">
-            <a href="https://github.com/nikooiko" target="_blank">
+            <a
+              href="https://github.com/nikooiko"
+              target="_blank"
+              arial-label="Navigate to github page"
+            >
               <Github size="32" />
             </a>
-            <a href="https://medium.com/@nikoikonomou92" target="_blank">
+            <a
+              href="https://medium.com/@nikoikonomou92"
+              target="_blank"
+              arial-label="Navigate to medium.com page"
+            >
               <svg viewBox="0 0 1043.63 592.71" className="w-8 h-8">
                 <g data-name="Layer 2">
                   <g data-name="Layer 1">
@@ -559,6 +571,7 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
             <a
               href="https://www.linkedin.com/in/nikos-oikonomou/"
               target="_blank"
+              arial-label="Navigate to linkedin page"
             >
               <Linkedin size="32" />
             </a>
@@ -611,7 +624,7 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
               {countries.map(({ name, Flag }) => (
                 <TooltipProvider key={name}>
                   <Tooltip>
-                    <TooltipTrigger>
+                    <TooltipTrigger aria-label="Show country name">
                       <Flag className="h-6" />
                     </TooltipTrigger>
                     <TooltipContent
@@ -646,4 +659,13 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
 
 export default IndexPage;
 
-export const Head = () => <title>About - Nikos Oikonomou</title>;
+export const Head = () => (
+  <>
+    <html lang="en" />
+    <title>About - Nikos Oikonomou</title>
+    <meta
+      name="description"
+      content="Personal page of Nikos Oikonomou. Provides information about the experience, education, skills, hobbies, and interests."
+    />
+  </>
+);
