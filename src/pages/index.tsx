@@ -1,4 +1,5 @@
 import { Layout } from "@/components/Layout";
+import { OrderByButton, OrderDirection } from "@/components/OrderByButton";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import {
@@ -42,29 +43,23 @@ type TimelineEntryProps = {
   link: string;
   logo: React.ReactNode;
   logoClasses?: string;
-  as: string;
   at: string;
-  end?: Date;
-  start: Date;
   skipDuration?: boolean;
-  what: React.ReactNode;
   technologies?: { link: string; icon: React.ReactNode; name: string }[];
-  history?: { as: string; start: Date; end: Date; what: React.ReactNode }[];
+  history: { as: string; start: Date; end?: Date; what: React.ReactNode }[];
 };
 
 const TimelineEntry: React.FC<TimelineEntryProps> = ({
-  end,
-  start,
   skipDuration,
-  as,
   at,
-  what,
   logo,
   logoClasses,
   link,
   technologies,
   history,
 }) => {
+  const { start, end, as, what } = history[0];
+  const rest = history.slice(1);
   return (
     <li className="mb-4 ms-8">
       <span
@@ -120,14 +115,18 @@ const TimelineEntry: React.FC<TimelineEntryProps> = ({
       <div className="text-base font-normal text-gray-500 dark:text-gray-400">
         {what}
       </div>
-      {history?.map((h) => (
+      {rest.map((h) => (
         <React.Fragment key={h.start.toISOString()}>
           <div className="h-4" />
           <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-8 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700" />
           <time className="mb-1 text-sm font-normal leading-none text-gray-500 dark:text-gray-500">
-            {format(h.start, "MMM. yyyy")} - {format(h.end, "MMM. yyyy")} (
+            {format(h.start, "MMM. yyyy")} -{" "}
+            {h.end ? format(h.end, "MMM. yyyy") : "Present"} (
             {formatDuration(
-              intervalToDuration({ start: h.start, end: h.end }),
+              intervalToDuration({
+                start: h.start,
+                end: h.end ?? new Date(),
+              }),
               {
                 format: ["years", "months"],
               }
@@ -156,7 +155,6 @@ const technologiesIconProps = {
 };
 const experience: TimelineEntryProps[] = [
   {
-    as: "Principal Engineer",
     at: "Kariera Group",
     logo: (
       <StaticImage
@@ -166,17 +164,6 @@ const experience: TimelineEntryProps[] = [
       />
     ),
     logoClasses: "bg-white",
-    start: new Date("2023-11-01T12:00:00.000Z"),
-    what: (
-      <p className="text-justify">
-        In 2023, I started switching into a less team oriented role, handed over
-        the Tech Lead role to another team member and started working towards
-        building a second team from the ground up. Together with both teams, we
-        are currently working on evolving our technology and bringing in more
-        sophisticated features to our platform while maintaining a very strong
-        focus on the quality of our code and the reliability of our services.
-      </p>
-    ),
     link: "https://www.karieragroup.com/",
     technologies: [
       {
@@ -237,6 +224,21 @@ const experience: TimelineEntryProps[] = [
     ],
     history: [
       {
+        as: "Principal Engineer",
+        start: new Date("2023-11-01T12:00:00.000Z"),
+        what: (
+          <p className="text-justify">
+            In 2023, I started switching into a less team oriented role, handed
+            over the Tech Lead role to another team member and started working
+            towards building a second team from the ground up. Together with
+            both teams, we are currently working on evolving our technology and
+            bringing in more sophisticated features to our platform while
+            maintaining a very strong focus on the quality of our code and the
+            reliability of our services.
+          </p>
+        ),
+      },
+      {
         as: "Tech Lead",
         end: new Date("2023-11-01T12:00:00.000Z"),
         start: new Date("2022-07-15T12:00:00.000Z"),
@@ -268,7 +270,6 @@ const experience: TimelineEntryProps[] = [
     ],
   },
   {
-    as: "Director of Engineering",
     at: "Centaur Analytics",
     logo: (
       <StaticImage
@@ -278,33 +279,6 @@ const experience: TimelineEntryProps[] = [
       />
     ),
     logoClasses: `bg-[#3a3a3c]`,
-    end: new Date("2022-01-15T12:00:00.000Z"),
-    start: new Date("2021-03-01T12:00:00.000Z"),
-    what: (
-      <>
-        <p className="text-justify">
-          In 2021, I became Centaur's Director Of Engineering in charge of
-          leading the Centaur's R&D department. I lead the Product Development
-          process and orchestrated the entire team's task workflow.
-        </p>
-        <br />
-        <p className="text-justify">
-          With the help of our team, I started scaling our department by adding
-          more members to it and I worked closely with all team leads to make
-          sure we identify and understand any personal or team problem and try
-          to resolve it as fast as possible.
-        </p>
-        <br />
-        <p className="text-justify">
-          Finally, as I was already experienced with Centaur's cloud
-          infrastructure I started working with our DevOps team to identify and
-          resolve cluster and deployment issues. To make our cloud more stable
-          and easier to monitor and at the same time build my DevOps knowledge,
-          I started upgrading our technology to use more modern tools and
-          versions and moved our cluster from self-managed to provider-managed.
-        </p>
-      </>
-    ),
     link: "https://www.centaur.ag/",
     technologies: [
       {
@@ -376,6 +350,38 @@ const experience: TimelineEntryProps[] = [
     ],
     history: [
       {
+        as: "Director of Engineering",
+        end: new Date("2022-01-15T12:00:00.000Z"),
+        start: new Date("2021-03-01T12:00:00.000Z"),
+        what: (
+          <>
+            <p className="text-justify">
+              In 2021, I became Centaur's Director Of Engineering in charge of
+              leading the Centaur's R&D department. I lead the Product
+              Development process and orchestrated the entire team's task
+              workflow.
+            </p>
+            <br />
+            <p className="text-justify">
+              With the help of our team, I started scaling our department by
+              adding more members to it and I worked closely with all team leads
+              to make sure we identify and understand any personal or team
+              problem and try to resolve it as fast as possible.
+            </p>
+            <br />
+            <p className="text-justify">
+              Finally, as I was already experienced with Centaur's cloud
+              infrastructure I started working with our DevOps team to identify
+              and resolve cluster and deployment issues. To make our cloud more
+              stable and easier to monitor and at the same time build my DevOps
+              knowledge, I started upgrading our technology to use more modern
+              tools and versions and moved our cluster from self-managed to
+              provider-managed.
+            </p>
+          </>
+        ),
+      },
+      {
         as: "Senior Software Engineer",
         end: new Date("2021-03-01T12:00:00.000Z"),
         start: new Date("2018-09-01T12:00:00.000Z"),
@@ -433,7 +439,6 @@ const experience: TimelineEntryProps[] = [
 
 const education: TimelineEntryProps[] = [
   {
-    as: "M.Sc.",
     at: "University of Thessaly",
     logo: (
       <StaticImage
@@ -443,31 +448,36 @@ const education: TimelineEntryProps[] = [
       />
     ),
     logoClasses: "bg-white",
-    end: new Date("2018-09-15T12:00:00.000Z"),
-    start: new Date("2012-09-15T12:00:00.000Z"),
-    what: (
-      <>
-        <a
-          href="https://www.e-ce.uth.gr/"
-          className="hover:underline"
-          target="_blank"
-        >
-          Electrical and Computer Engineering.
-        </a>
-        <p className="mt-4 text-justify">
-          As a student, I was intrigued by software development, especially
-          low-level programming. At first, I focused mainly on system-level
-          programming (POSIX), distributed systems, computer architecture
-          (assembly/Verilog), and high-performance computing (CUDA/OpenMP),
-          while at the same time, I started my first steps as a web developer by
-          building various web applications. Later, I focused on embedded
-          systems and ad hoc wireless sensor networks, which allowed me to enter
-          the IoT world and build end-to-end solutions.
-        </p>
-      </>
-    ),
     link: "https://uth.gr",
     skipDuration: true,
+    history: [
+      {
+        as: "M.Sc.",
+        end: new Date("2018-09-15T12:00:00.000Z"),
+        start: new Date("2012-09-15T12:00:00.000Z"),
+        what: (
+          <>
+            <a
+              href="https://www.e-ce.uth.gr/"
+              className="hover:underline"
+              target="_blank"
+            >
+              Electrical and Computer Engineering.
+            </a>
+            <p className="mt-4 text-justify">
+              As a student, I was intrigued by software development, especially
+              low-level programming. At first, I focused mainly on system-level
+              programming (POSIX), distributed systems, computer architecture
+              (assembly/Verilog), and high-performance computing (CUDA/OpenMP),
+              while at the same time, I started my first steps as a web
+              developer by building various web applications. Later, I focused
+              on embedded systems and ad hoc wireless sensor networks, which
+              allowed me to enter the IoT world and build end-to-end solutions.
+            </p>
+          </>
+        ),
+      },
+    ],
   },
 ];
 
@@ -539,6 +549,16 @@ const countries = [
 ];
 
 const IndexPage: React.FC<PageProps> = ({ location }) => {
+  const [experienceOrder, setExperienceOrder] =
+    React.useState<OrderDirection>("desc");
+  const finalExperience = React.useMemo(() => {
+    return experienceOrder === "desc"
+      ? experience.slice()
+      : experience
+          .slice()
+          .reverse()
+          .map((e) => ({ ...e, history: e.history.slice().reverse() }));
+  }, [experienceOrder]);
   return (
     <Layout activePath={location.pathname}>
       <section className="p-4 flex flex-col sm:flex-row justify-start sm:justify-center items-center gap-4 sm:gap-8 max-w-xl">
@@ -603,9 +623,21 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
         </div>
       </section>
       <section className="p-4 pr-8 max-w-xl">
-        <h2 className="text-2xl font-bold py-2">Work Experience</h2>
-        <ol className="relative border-s border-gray-200 dark:border-gray-700 ml-4">
-          {experience.map((e, i) => (
+        <div className="flex flex-row justify-between items-center">
+          <h2 className="text-2xl font-bold py-2">Work Experience</h2>
+          <OrderByButton
+            onOrderChange={(order) => {
+              console.log("change-order", order);
+              setExperienceOrder(order);
+            }}
+          />
+        </div>
+        <ol
+          className={
+            "relative border-s border-gray-200 dark:border-gray-700 ml-4"
+          }
+        >
+          {finalExperience.map((e, i) => (
             <TimelineEntry key={`exp-${i}`} {...e} />
           ))}
         </ol>
