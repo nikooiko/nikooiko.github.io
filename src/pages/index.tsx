@@ -412,7 +412,7 @@ const experience: TimelineEntryProps[] = [
       {
         as: "Software Engineer",
         end: new Date("2018-09-01T12:00:00.000Z"),
-        start: new Date("2016-07-01T12:00:00.000Z"),
+        start: new Date("2016-09-01T12:00:00.000Z"),
         what: (
           <>
             <p className="text-justify">
@@ -424,13 +424,27 @@ const experience: TimelineEntryProps[] = [
             </p>
             <br />
             <p className="text-justify">
-              After my first year at centaur, I started working with IoT devices
+              After my first year at Centaur, I started working with IoT devices
               to support the embedded team. I initially participated as a
               secondary developer for the software of the IP-enabled devices but
               I quickly took the lead of all the software and firmware layers
               for such devices.
             </p>
           </>
+        ),
+      },
+      {
+        as: "Software Engineer Intern",
+        end: new Date("2016-09-01T12:00:00.000Z"),
+        start: new Date("2016-07-01T12:00:00.000Z"),
+        what: (
+          <p className="text-justify">
+            I began my career as an intern at Centaur, collaborating with the
+            web application team on front-end and back-end tasks. My
+            responsibilities included maintaining and enhancing the testability
+            of the existing codebase, with a focus on improving stability and
+            performance across various lower-priority projects.
+          </p>
         ),
       },
     ],
