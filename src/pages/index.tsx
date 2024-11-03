@@ -88,16 +88,12 @@ const TimelineEntry: React.FC<TimelineEntryProps> = ({
         </a>
       </h3>
       {technologies && (
-        <div className="flex flex-row gap-2 flex-wrap justify-between">
+        <div className="flex flex-row gap-1 flex-wrap justify-between">
           {technologies.map(({ link, icon, name }) => (
             <TooltipProvider key={name}>
               <Tooltip>
                 <TooltipTrigger asChild>
-                  <a
-                    href={link}
-                    target="_blank"
-                    aria-label="Show technology name"
-                  >
+                  <a href={link} target="_blank" aria-label="Show technology">
                     {icon}
                   </a>
                 </TooltipTrigger>
@@ -150,7 +146,7 @@ const experienceLogoProps = {
   width: 48,
 };
 const technologiesIconProps = {
-  className: "rounded-full",
+  className: "rounded-full w-12 sm:w-16",
   width: 64,
 };
 const experience: TimelineEntryProps[] = [
@@ -209,6 +205,28 @@ const experience: TimelineEntryProps[] = [
           />
         ),
         name: "NextJS",
+      },
+      {
+        link: "https://kafka.apache.org/",
+        icon: (
+          <StaticImage
+            src="../images/technologies/kafka_logo.png"
+            alt="kafka"
+            {...technologiesIconProps}
+          />
+        ),
+        name: "Kafka",
+      },
+      {
+        link: "https://www.elastic.co/",
+        icon: (
+          <StaticImage
+            src="../images/technologies/elastic_logo.png"
+            alt="elastic"
+            {...technologiesIconProps}
+          />
+        ),
+        name: "Elastic",
       },
       {
         link: "https://kubernetes.io/",
@@ -636,7 +654,7 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
           </Button>
         </div>
       </section>
-      <section className="p-4 pr-8 max-w-xl">
+      <section className="px-4 mt-4 max-w-xl">
         <div className="flex flex-row justify-between items-center">
           <h2 className="text-2xl font-bold py-2">Work Experience</h2>
           <OrderByButton
@@ -648,22 +666,26 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
         </div>
         <ol
           className={
-            "relative border-s border-gray-200 dark:border-gray-700 ml-4"
+            "relative border-s border-gray-200 dark:border-gray-700 ml-4 pr-4 sm:pr-0"
           }
         >
           {finalExperience.map((e, i) => (
             <TimelineEntry key={`exp-${i}`} {...e} />
           ))}
         </ol>
-        <h2 className="text-2xl font-bold py-2 mt-8">Education</h2>
-        <ol className="relative border-s border-gray-200 dark:border-gray-700 ml-4">
+      </section>
+      <section className="px-4 py-2 max-w-xl">
+        <h2 className="text-2xl font-bold py-2">Education</h2>
+        <ol className="relative border-s border-gray-200 dark:border-gray-700 ml-4 pr-4 sm:pr-0">
           {education.map((e, i) => (
             <TimelineEntry key={`edu-${i}`} {...e} />
           ))}
         </ol>
+      </section>
+      <section className="px-4 py-2 max-w-xl">
         <div>
           <div>
-            <h2 className="text-2xl font-bold py-2 mt-8">Hobbies</h2>
+            <h2 className="text-2xl font-bold py-2">Hobbies</h2>
             <div className="flex flex-row gap-1 items-center">
               <Luggage className="w-8" />
               <h3 className="text-xl pr-1">
