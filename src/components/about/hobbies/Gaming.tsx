@@ -26,11 +26,11 @@ const items = [
   {
     icon: ClockIcon,
     title: "Most Played Game",
-    description: "Skyrim (500+ hours)",
+    description: "Skyrim",
   },
 ];
 
-export const GamingSection: React.FC = () => {
+export const Gaming: React.FC = () => {
   return (
     <div className="flex flex-col">
       <div className="flex flex-row gap-1 items-center">
