@@ -1,3 +1,4 @@
+import { GamingSection } from "@/components/GamingSection";
 import { Layout } from "@/components/Layout";
 import { OrderByButton, OrderDirection } from "@/components/OrderByButton";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -12,14 +13,7 @@ import { cn } from "@/lib/utils";
 import { format, formatDuration, intervalToDuration } from "date-fns";
 import { type PageProps } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
-import {
-  ChefHat,
-  Gamepad2,
-  Github,
-  Linkedin,
-  Luggage,
-  NotebookPen,
-} from "lucide-react";
+import { ChefHat, Github, Linkedin, Luggage, NotebookPen } from "lucide-react";
 import * as React from "react";
 import AT from "../images/countries/at.inline.svg";
 import BE from "../images/countries/be.inline.svg";
@@ -710,18 +704,18 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
               ))}
             </div>
           </div>
-
           <div className="flex flex-row gap-1 items-center mt-2">
             <ChefHat className="w-8" />
             <h3 className="text-xl pr-1">Cooking</h3>
           </div>
-          <div className="flex flex-row gap-1 items-center">
-            <Gamepad2 className="w-8" />
-            <h3 className="text-xl pr-1">Gaming</h3>
-          </div>
-          <div className="flex flex-row gap-1 items-center">
+          <GamingSection />
+          <div className="flex flex-row gap-1 items-center mt-2">
             <NotebookPen className="w-8" />
-            <h3 className="text-xl pr-1">Writing</h3>
+            <h3 className="text-xl pr-1">
+              <a href="/articles" className="hover:underline">
+                Writing
+              </a>
+            </h3>
           </div>
         </div>
       </section>
