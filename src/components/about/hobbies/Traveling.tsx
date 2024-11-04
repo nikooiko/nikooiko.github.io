@@ -92,12 +92,12 @@ const countries = [
 
 export const Traveling: React.FC = () => {
   return (
-    <>
+    <div className="flex flex-col rounded-lg shadow dark:shadow-lg bg-card p-2">
       <div className="flex flex-row gap-1 items-center">
         <Luggage className="w-8" />
         <h3 className="text-xl pr-1">Traveling ({countries.length} of 195)</h3>
       </div>
-      <div className="flex flex-wrap gap-1 pt-1 pl-1">
+      <div className="flex flex-wrap gap-1 mt-2 px-1">
         {countries.map(({ name, Flag }) => (
           <TooltipProvider key={name}>
             <Tooltip>
@@ -114,6 +114,6 @@ export const Traveling: React.FC = () => {
           </TooltipProvider>
         ))}
       </div>
-    </>
+    </div>
   );
 };

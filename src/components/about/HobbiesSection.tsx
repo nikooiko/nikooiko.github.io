@@ -6,11 +6,11 @@ import { Writing } from "./hobbies/Writing";
 
 export const HobbiesSection: React.FC = () => {
   return (
-    <section className="px-4 py-2 max-w-xl">
-      <h2 className="text-2xl font-bold py-2">Hobbies</h2>
+    <section className="flex flex-col gap-2 px-4 py-2 max-w-xl">
+      <h2 className="text-2xl font-bold">Hobbies</h2>
       <Traveling />
-      <Cooking />
       <Gaming />
+      <Cooking />
       <Writing />
     </section>
   );
