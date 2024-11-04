@@ -37,10 +37,13 @@ export const Gaming: React.FC = () => {
         <Gamepad2 className="w-8" />
         <h3 className="text-xl pr-1">Gaming</h3>
       </div>
-      <div className="flex flex-wrap gap-2 px-2">
+      <div className="flex flex-wrap gap-2 px-2 mt-1">
         {items.map((item) => (
-          <div key={item.title} className="flex flex-col rounded-lg shadow p-2">
-            <div className="flex gap-2 py-1 items-center">
+          <div
+            key={item.title}
+            className="flex flex-col rounded-lg shadow p-2 py-2 dark:shadow-lg bg-card"
+          >
+            <div className="flex gap-2 items-center">
               <item.icon className="h-5 w-5 text-muted-foreground" />
               <h4 className="font-semibold">{item.title}</h4>
             </div>

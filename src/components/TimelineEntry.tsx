@@ -35,13 +35,13 @@ export const TimelineEntry: React.FC<TimelineEntryProps> = ({
     <li className="mb-4 ms-8">
       <span
         className={cn(
-          `absolute flex items-center justify-center w-12 h-12 rounded-full -start-6 mt-3 bg-gray-200 shadow-lg `,
+          `absolute flex items-center justify-center w-12 h-12 rounded-full -start-6 mt-3 bg-stone-200 shadow-lg `,
           logoClasses
         )}
       >
         {logo}
       </span>
-      <time className="mb-1 text-sm font-normal leading-none text-gray-500 dark:text-gray-500">
+      <time className="mb-1 text-sm font-normal leading-none text-stone-500 dark:text-stone-400">
         {format(start, "MMM. yyyy")} -{" "}
         {end ? format(end, "MMM. yyyy") : "Present"}
         {!skipDuration &&
@@ -52,14 +52,14 @@ export const TimelineEntry: React.FC<TimelineEntryProps> = ({
             }
           )})`}
       </time>
-      <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+      <h3 className="text-lg font-semibold text-stone-900 dark:text-stone-100">
         {as} @{" "}
         <a href={link} className="hover:underline" target="_blank">
           {at}
         </a>
       </h3>
       {industry && (
-        <h4 className="text-sm font-light leading-tight text-justify text-gray-900 dark:text-white">
+        <h4 className="text-sm font-light leading-tight text-justify text-stone-900 dark:text-stone-200">
           {industry}
         </h4>
       )}
@@ -75,7 +75,7 @@ export const TimelineEntry: React.FC<TimelineEntryProps> = ({
                 </TooltipTrigger>
                 <TooltipContent
                   side="bottom"
-                  className="py-0 px-2 dark:bg-gray-500 dark:text-white"
+                  className="py-0 px-2 dark:bg-stone-700 dark:text-stone-100"
                 >
                   {name}
                 </TooltipContent>
@@ -84,14 +84,14 @@ export const TimelineEntry: React.FC<TimelineEntryProps> = ({
           ))}
         </div>
       )}
-      <div className="text-base font-normal text-gray-500 dark:text-gray-400">
+      <div className="text-base font-normal text-stone-500 dark:text-stone-300">
         {what}
       </div>
       {rest.map((h) => (
         <React.Fragment key={h.start.toISOString()}>
           <div className="h-4" />
-          <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-8 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700" />
-          <time className="mb-1 text-sm font-normal leading-none text-gray-500 dark:text-gray-500">
+          <div className="absolute w-3 h-3 bg-stone-200 rounded-full mt-8 -start-1.5 border border-white dark:border-stone-900 dark:bg-stone-700" />
+          <time className="mb-1 text-sm font-normal leading-none text-stone-500 dark:text-stone-500">
             {format(h.start, "MMM. yyyy")} -{" "}
             {h.end ? format(h.end, "MMM. yyyy") : "Present"} (
             {formatDuration(
@@ -105,10 +105,10 @@ export const TimelineEntry: React.FC<TimelineEntryProps> = ({
             )}
             )
           </time>
-          <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+          <h3 className="text-lg font-semibold text-stone-900 dark:text-stone-100">
             {h.as}
           </h3>
-          <div className=" text-base font-normal text-gray-500 dark:text-gray-400">
+          <div className=" text-base font-normal text-stone-500 dark:text-stone-300">
             {h.what}
           </div>
         </React.Fragment>

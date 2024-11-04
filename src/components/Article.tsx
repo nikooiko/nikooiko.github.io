@@ -7,7 +7,7 @@ import { badgeVariants } from "./ui/badge";
 export const Article: React.FC<{ article: ArticleType }> = ({ article }) => {
   return (
     <article
-      className="group rounded-lg bg-background shadow-sm transition-all hover:shadow-md"
+      className="group rounded-lg bg-card shadow-sm dark:shadow-lg transition-all hover:shadow-2xl"
       id={article.id}
     >
       <a href={article.link} className="block" target="_blank">
@@ -23,7 +23,7 @@ export const Article: React.FC<{ article: ArticleType }> = ({ article }) => {
         </div>
         <div className="p-4">
           <h2 className="text-xl font-bold tracking-tight">{article.title}</h2>
-          <p className="mt-2 text-sm font-normal text-gray-400 dark:text-gray-500">
+          <p className="mt-2 text-sm font-normal text-stone-400 dark:text-stone-500">
             {formatDate(article.publishedAt, "dd MMM. yyyy")}
           </p>
           {article.categories.length && (

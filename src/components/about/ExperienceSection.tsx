@@ -1,4 +1,5 @@
 import { OrderDirection } from "@/components/OrderByButton";
+import { cn } from "@/lib/utils";
 import { StaticImage } from "gatsby-plugin-image";
 import * as React from "react";
 import { OrderByButton } from "../OrderByButton";
@@ -62,22 +63,34 @@ const experience: TimelineEntryProps[] = [
       {
         link: "https://nextjs.org/",
         icon: (
-          <StaticImage
-            src="../../images/technologies/nextjs_logo.png"
-            alt="nextjs"
-            {...technologiesIconProps}
-          />
+          <div className="dark:m-2 dark:bg-stone-100 rounded-full">
+            <StaticImage
+              src="../../images/technologies/nextjs_logo.png"
+              alt="nextjs"
+              {...technologiesIconProps}
+              className={cn(
+                technologiesIconProps.className,
+                "dark:w-8 sm:dark:w-12"
+              )}
+            />
+          </div>
         ),
         name: "NextJS",
       },
       {
         link: "https://kafka.apache.org/",
         icon: (
-          <StaticImage
-            src="../../images/technologies/kafka_logo.png"
-            alt="kafka"
-            {...technologiesIconProps}
-          />
+          <div className="dark:m-2 dark:p-1 dark:bg-stone-100 rounded-full">
+            <StaticImage
+              src="../../images/technologies/kafka_logo.png"
+              alt="kafka"
+              {...technologiesIconProps}
+              className={cn(
+                technologiesIconProps.className,
+                "dark:w-6 sm:dark:w-10"
+              )}
+            />
+          </div>
         ),
         name: "Kafka",
       },
@@ -178,22 +191,34 @@ const experience: TimelineEntryProps[] = [
       {
         link: "https://loopback.io/lb3",
         icon: (
-          <StaticImage
-            src="../../images/technologies/lb_logo.png"
-            alt="lb"
-            {...technologiesIconProps}
-          />
+          <div className="dark:m-2 dark:bg-stone-100 rounded-full">
+            <StaticImage
+              src="../../images/technologies/lb_logo.png"
+              alt="loopback"
+              {...technologiesIconProps}
+              className={cn(
+                technologiesIconProps.className,
+                "dark:w-8 sm:dark:w-12"
+              )}
+            />
+          </div>
         ),
         name: "Loopback",
       },
       {
         link: "https://www.mongodb.com/",
         icon: (
-          <StaticImage
-            src="../../images/technologies/mongodb_logo.png"
-            alt="mongodb"
-            {...technologiesIconProps}
-          />
+          <div className="dark:m-2 dark:bg-stone-100 rounded-full">
+            <StaticImage
+              src="../../images/technologies/mongodb_logo.png"
+              alt="mongodb"
+              {...technologiesIconProps}
+              className={cn(
+                technologiesIconProps.className,
+                "dark:w-8 sm:dark:w-12"
+              )}
+            />
+          </div>
         ),
         name: "MongoDB",
       },
@@ -358,7 +383,7 @@ export const ExperienceSection: React.FC = () => {
       </div>
       <ol
         className={
-          "relative border-s border-gray-200 dark:border-gray-700 ml-4 pr-4 sm:pr-0"
+          "relative border-s border-stone-200 dark:border-stone-700 ml-4 pr-4 sm:pr-0"
         }
       >
         {finalExperience.map((e, i) => (

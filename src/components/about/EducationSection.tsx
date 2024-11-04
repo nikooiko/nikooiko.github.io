@@ -55,7 +55,7 @@ export const EducationSection: React.FC = () => {
   return (
     <section className="px-4 py-2 max-w-xl">
       <h2 className="text-2xl font-bold py-2">Education</h2>
-      <ol className="relative border-s border-gray-200 dark:border-gray-700 ml-4 pr-4 sm:pr-0">
+      <ol className="relative border-s border-stone-200 dark:border-stone-700 ml-4 pr-4 sm:pr-0">
         {education.map((e, i) => (
           <TimelineEntry key={`edu-${i}`} {...e} />
         ))}
