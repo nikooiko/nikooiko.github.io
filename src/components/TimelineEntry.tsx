@@ -13,6 +13,7 @@ export type TimelineEntryProps = {
   logo: React.ReactNode;
   logoClasses?: string;
   at: string;
+  industry?: string;
   skipDuration?: boolean;
   technologies?: { link: string; icon: React.ReactNode; name: string }[];
   history: { as: string; start: Date; end?: Date; what: React.ReactNode }[];
@@ -21,6 +22,7 @@ export type TimelineEntryProps = {
 export const TimelineEntry: React.FC<TimelineEntryProps> = ({
   skipDuration,
   at,
+  industry,
   logo,
   logoClasses,
   link,
@@ -56,6 +58,11 @@ export const TimelineEntry: React.FC<TimelineEntryProps> = ({
           {at}
         </a>
       </h3>
+      {industry && (
+        <h4 className="text-sm font-light leading-tight text-justify text-gray-900 dark:text-white">
+          {industry}
+        </h4>
+      )}
       {technologies && (
         <div className="flex flex-row gap-1 flex-wrap justify-between">
           {technologies.map(({ link, icon, name }) => (

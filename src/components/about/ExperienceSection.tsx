@@ -15,6 +15,7 @@ const technologiesIconProps = {
 const experience: TimelineEntryProps[] = [
   {
     at: "Kariera Group",
+    industry: "HR Solutions",
     logo: (
       <StaticImage
         src="../../images/kariera_group_logo.png"
@@ -152,6 +153,7 @@ const experience: TimelineEntryProps[] = [
   },
   {
     at: "Centaur Analytics",
+    industry: "AgTech IoT & Analytics",
     logo: (
       <StaticImage
         src="../../images/centaur_logo.png"
