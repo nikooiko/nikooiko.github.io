@@ -132,6 +132,33 @@ const experience: TimelineEntryProps[] = [
             reliability of our services.
           </p>
         ),
+        hightlights: [
+          <span>
+            Established{" "}
+            <b>
+              <u>best practice guidelines</u>
+            </b>{" "}
+            (GitOps, naming conventions, code structure) for the engineering
+            team and collaborated with tech leads to{" "}
+            <b>
+              <u>
+                maintain a unified architecture and resolve workflow challenges
+              </u>
+            </b>
+            .
+          </span>,
+          <span>
+            Led recruiting{" "}
+            <b>
+              <u>tech task preparation</u>
+            </b>{" "}
+            and managed{" "}
+            <b>
+              <u>hiring</u>
+            </b>{" "}
+            to expand the team.
+          </span>,
+        ],
       },
       {
         as: "Tech Lead",
@@ -140,13 +167,45 @@ const experience: TimelineEntryProps[] = [
         what: (
           <p className="text-justify">
             Not much later on, I assumed the role of Tech Lead. My main focus
-            was to lead the development of the backend services and help the
+            was to lead the development of the back-end services and help the
             team build a scalable and reliable platform. I was also responsible
-            for the architecture and the design of the backend services and I
+            for the architecture and the design of the back-end services and I
             was working closely with the product team to understand the business
             requirements and translate them into technical requirements.
           </p>
         ),
+        hightlights: [
+          <span>
+            <b>
+              <u>Mentored</u>
+            </b>{" "}
+            team members to take on more{" "}
+            <b>
+              <u>responsibility</u>
+            </b>
+            , emphasizing{" "}
+            <b>
+              <u>code reviews</u>
+            </b>{" "}
+            and{" "}
+            <b>
+              <u>constructive feedback</u>
+            </b>{" "}
+            for team growth.
+          </span>,
+          <span>
+            Created{" "}
+            <b>
+              <u>technical documentation</u>
+            </b>{" "}
+            for{" "}
+            <b>
+              <u>KPI-critical features</u>
+            </b>{" "}
+            to support productive review and evaluation cycles for upcoming
+            functionalities.
+          </span>,
+        ],
       },
       {
         as: "Senior Backend Engineer",
@@ -161,6 +220,46 @@ const experience: TimelineEntryProps[] = [
             completion in the most rapid and efficient way.
           </p>
         ),
+        hightlights: [
+          <span>
+            Led{" "}
+            <b>
+              <u>mission-critical</u>
+            </b>{" "}
+            feature development, managing{" "}
+            <b>
+              <u>tight deadlines</u>
+            </b>{" "}
+            and{" "}
+            <b>
+              <u>third-party integration</u>
+            </b>
+            .
+          </span>,
+          <span>
+            Built{" "}
+            <b>
+              <u>core search functionality</u>
+            </b>{" "}
+            using{" "}
+            <b>
+              <u>Azure Cognitive Search</u>
+            </b>{" "}
+            developed a{" "}
+            <b>
+              <u>fair scoring system</u>
+            </b>
+            , established{" "}
+            <b>
+              <u>regression testing</u>
+            </b>
+            , and{" "}
+            <b>
+              <u>documented</u>
+            </b>{" "}
+            thoroughly for clarity.
+          </span>,
+        ],
       },
     ],
   },
@@ -288,6 +387,32 @@ const experience: TimelineEntryProps[] = [
             </p>
           </>
         ),
+        hightlights: [
+          <span>
+            <b>
+              <u>Orchestrated Product Development</u>
+            </b>{" "}
+            and the department’s workflow.
+          </span>,
+          <span>
+            <b>
+              <u>Lead the hiring process</u>
+            </b>
+            , added team members, closely{" "}
+            <b>
+              <u>mentored</u>
+            </b>{" "}
+            them,{" "}
+            <b>
+              <u>assisted with solution design</u>
+            </b>
+            , and{" "}
+            <b>
+              <u>reviewed their work</u>
+            </b>
+            .
+          </span>,
+        ],
       },
       {
         as: "Senior Software Engineer",
@@ -316,6 +441,75 @@ const experience: TimelineEntryProps[] = [
             </p>
           </>
         ),
+        hightlights: [
+          <span>
+            Refactored the initial back-end API{" "}
+            <b>
+              <u>from monolith to microservices architecture</u>
+            </b>
+            , learning from mistakes to build a{" "}
+            <b>
+              <u>scalable</u>
+            </b>{" "}
+            and{" "}
+            <b>
+              <u>stable distributed system</u>
+            </b>
+            .
+          </span>,
+
+          <span>
+            Led the development of a new{" "}
+            <b>
+              <u>IoT platform</u>
+            </b>
+            , including low-level{" "}
+            <b>
+              <u>Linux system development</u>
+            </b>
+            , sensor management, and{" "}
+            <b>
+              <u>device-to-device communication</u>
+            </b>{" "}
+            (e.g.,{" "}
+            <b>
+              <u>MQTT</u>
+            </b>
+            ,{" "}
+            <b>
+              <u>802.15.4</u>
+            </b>
+            ).
+          </span>,
+
+          <span>
+            Took initiatives to{" "}
+            <b>
+              <u>assist the DevOps team</u>
+            </b>
+            , upgraded third-party tools (e.g.,{" "}
+            <b>
+              <u>Grafana</u>
+            </b>
+            ,{" "}
+            <b>
+              <u>Kibana</u>
+            </b>
+            ,{" "}
+            <b>
+              <u>Prometheus</u>
+            </b>
+            ), and migrated the platform from a{" "}
+            <b>
+              <u>self-managed K8S cluster</u>
+            </b>{" "}
+            (AWS+Kops) to{" "}
+            <b>
+              <u>EKS</u>
+            </b>
+            .
+          </span>,
+        ],
       },
       {
         as: "Software Engineer",
@@ -340,6 +534,44 @@ const experience: TimelineEntryProps[] = [
             </p>
           </>
         ),
+        hightlights: [
+          <span>
+            Designed and developed software from scratch for both{" "}
+            <b>
+              <u>back-end</u>
+            </b>{" "}
+            and{" "}
+            <b>
+              <u>front-end</u>
+            </b>
+            .
+          </span>,
+
+          <span>
+            Built complete{" "}
+            <b>
+              <u>CI/CD procedures</u>
+            </b>{" "}
+            from scratch using Gitlab CI and Bash, integrating complex build
+            systems (e.g.{" "}
+            <b>
+              <u>Yocto</u>
+            </b>
+            ).
+          </span>,
+
+          <span>
+            Developed{" "}
+            <b>
+              <u>end-to-end solutions</u>
+            </b>{" "}
+            by taking on entire features to relieve the team{" "}
+            <b>
+              <u>during critical deadlines</u>
+            </b>
+            .
+          </span>,
+        ],
       },
       {
         as: "Software Engineer Intern",

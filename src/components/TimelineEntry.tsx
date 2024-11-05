@@ -6,6 +6,7 @@ import {
 } from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
 import { format, formatDuration, intervalToDuration } from "date-fns";
+import { BriefcaseIcon, CalendarIcon, SparkleIcon } from "lucide-react";
 import * as React from "react";
 
 export type TimelineEntryProps = {
@@ -16,7 +17,13 @@ export type TimelineEntryProps = {
   industry?: string;
   skipDuration?: boolean;
   technologies?: { link: string; icon: React.ReactNode; name: string }[];
-  history: { as: string; start: Date; end?: Date; what: React.ReactNode }[];
+  history: {
+    as: string;
+    start: Date;
+    end?: Date;
+    what: React.ReactNode;
+    hightlights?: React.ReactNode[];
+  }[];
 };
 
 export const TimelineEntry: React.FC<TimelineEntryProps> = ({
@@ -29,7 +36,7 @@ export const TimelineEntry: React.FC<TimelineEntryProps> = ({
   technologies,
   history,
 }) => {
-  const { start, end, as, what } = history[0];
+  const { start, end, as, what, hightlights } = history[0];
   const rest = history.slice(1);
   return (
     <li className="mb-4 ms-8">
@@ -41,7 +48,8 @@ export const TimelineEntry: React.FC<TimelineEntryProps> = ({
       >
         {logo}
       </span>
-      <time className="mb-1 text-sm font-normal leading-none text-stone-500 dark:text-stone-400">
+      <time className="mb-1 text-sm font-normal leading-none text-stone-500 dark:text-stone-300 flex items-center">
+        <CalendarIcon className="mr-2 h-4 w-4" />
         {format(start, "MMM. yyyy")} -{" "}
         {end ? format(end, "MMM. yyyy") : "Present"}
         {!skipDuration &&
@@ -59,7 +67,8 @@ export const TimelineEntry: React.FC<TimelineEntryProps> = ({
         </a>
       </h3>
       {industry && (
-        <h4 className="text-sm font-light leading-tight text-justify text-stone-900 dark:text-stone-200">
+        <h4 className="text-sm font-light leading-tight text-justify text-stone-900 dark:text-stone-200 flex items-center">
+          <BriefcaseIcon className="mr-2 h-4 w-4" />
           {industry}
         </h4>
       )}
@@ -87,11 +96,24 @@ export const TimelineEntry: React.FC<TimelineEntryProps> = ({
       <div className="text-base font-normal text-stone-500 dark:text-stone-300">
         {what}
       </div>
+      {hightlights?.length && (
+        <>
+          <h5 className="font-semibold mt-4 italic">Key Highlights</h5>
+          <ul className="mt-2 list-disc list-inside text-sm italic">
+            {hightlights.map((highlight, hIndex) => (
+              <li key={hIndex} className="flex items-start">
+                <SparkleIcon className="mr-2 h-4 w-4 mt-1 flex-shrink-0" />
+                <span>{highlight}</span>
+              </li>
+            ))}
+          </ul>
+        </>
+      )}
       {rest.map((h) => (
         <React.Fragment key={h.start.toISOString()}>
           <div className="h-4" />
           <div className="absolute w-3 h-3 bg-stone-200 rounded-full mt-8 -start-1.5 border border-white dark:border-stone-900 dark:bg-stone-700" />
-          <time className="mb-1 text-sm font-normal leading-none text-stone-500 dark:text-stone-500">
+          <time className="mb-1 text-sm font-normal leading-none text-stone-500 dark:text-stone-300">
             {format(h.start, "MMM. yyyy")} -{" "}
             {h.end ? format(h.end, "MMM. yyyy") : "Present"} (
             {formatDuration(
@@ -111,6 +133,19 @@ export const TimelineEntry: React.FC<TimelineEntryProps> = ({
           <div className=" text-base font-normal text-stone-500 dark:text-stone-300">
             {h.what}
           </div>
+          {h.hightlights?.length && (
+            <>
+              <h5 className="font-semibold mt-4 italic">Key Highlights</h5>
+              <ul className="mt-2 list-disc list-inside text-sm italic">
+                {h.hightlights.map((highlight, hIndex) => (
+                  <li key={hIndex} className="flex items-start">
+                    <SparkleIcon className="mr-2 h-4 w-4 mt-1 flex-shrink-0" />
+                    <span>{highlight}</span>
+                  </li>
+                ))}
+              </ul>
+            </>
+          )}
         </React.Fragment>
       ))}
     </li>
