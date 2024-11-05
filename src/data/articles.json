@@ -1,0 +1,286 @@
+{
+  "data": [
+    {
+      "id": "https://medium.com/p/2ecfd26848d4",
+      "title": "Synchronization/Locking with Redis & Node.js",
+      "description": "<div class=\"medium-feed-item\"><p class=\"medium-feed-image\"><a href=\"https://blog.stackademic.com/synchronization-locking-with-redis-nodejs-2ecfd26848d4?source=rss-f8ee0b07ef4d------2\"><img src=\"https://cdn-images-1.medium.com/max/1792/1*xT_b7yg5zrNH_Hlzmu-plg.jpeg\" width=\"1792\"></a></p><p class=\"medium-feed-snippet\">This guide introduces Redis-based mechanisms (compare and swap &amp; counting semaphores) for synchronization and access control of shared&#x2026;</p><p class=\"medium-feed-link\"><a href=\"https://blog.stackademic.com/synchronization-locking-with-redis-nodejs-2ecfd26848d4?source=rss-f8ee0b07ef4d------2\">Continue reading on Stackademic »</a></p></div>",
+      "link": "https://blog.stackademic.com/synchronization-locking-with-redis-nodejs-2ecfd26848d4?source=rss-f8ee0b07ef4d------2",
+      "publishedAt": 1716577177000,
+      "categories": [
+        {
+          "name": "guides-and-tutorials",
+          "link": "https://medium.com/tag/guides-and-tutorials"
+        },
+        {
+          "name": "backend",
+          "link": "https://medium.com/tag/backend"
+        },
+        {
+          "name": "nodejs",
+          "link": "https://medium.com/tag/nodejs"
+        },
+        {
+          "name": "web-development",
+          "link": "https://medium.com/tag/web-development"
+        },
+        {
+          "name": "redis",
+          "link": "https://medium.com/tag/redis"
+        }
+      ]
+    },
+    {
+      "id": "https://medium.com/p/7cf03d9303ce",
+      "title": "NestJS - Elastic Search - Text Search - Part 3",
+      "description": "<div class=\"medium-feed-item\"><p class=\"medium-feed-image\"><a href=\"https://blog.stackademic.com/nestjs-elastic-search-text-search-part-3-7cf03d9303ce?source=rss-f8ee0b07ef4d------2\"><img src=\"https://cdn-images-1.medium.com/max/1792/1*S9gAN-tL90L7aeSbxqfBvA.jpeg\" width=\"1792\"></a></p><p class=\"medium-feed-snippet\">In this section, we are introducing elastic search basic functionality using NestJS. This is the 3rd part of this section, the Text Search.</p><p class=\"medium-feed-link\"><a href=\"https://blog.stackademic.com/nestjs-elastic-search-text-search-part-3-7cf03d9303ce?source=rss-f8ee0b07ef4d------2\">Continue reading on Stackademic »</a></p></div>",
+      "link": "https://blog.stackademic.com/nestjs-elastic-search-text-search-part-3-7cf03d9303ce?source=rss-f8ee0b07ef4d------2",
+      "publishedAt": 1715361186000,
+      "categories": [
+        {
+          "name": "backend",
+          "link": "https://medium.com/tag/backend"
+        },
+        {
+          "name": "nodejs",
+          "link": "https://medium.com/tag/nodejs"
+        },
+        {
+          "name": "web-development",
+          "link": "https://medium.com/tag/web-development"
+        },
+        {
+          "name": "elasticsearch",
+          "link": "https://medium.com/tag/elasticsearch"
+        },
+        {
+          "name": "nestjs",
+          "link": "https://medium.com/tag/nestjs"
+        }
+      ]
+    },
+    {
+      "id": "https://medium.com/p/221af9a7b06e",
+      "title": "NestJS - Elastic Search - Filters - Part 2",
+      "description": "<div class=\"medium-feed-item\"><p class=\"medium-feed-image\"><a href=\"https://blog.stackademic.com/nestjs-elastic-search-filters-part-2-221af9a7b06e?source=rss-f8ee0b07ef4d------2\"><img src=\"https://cdn-images-1.medium.com/max/1792/1*S9gAN-tL90L7aeSbxqfBvA.jpeg\" width=\"1792\"></a></p><p class=\"medium-feed-snippet\">In this section, we are introducing elastic search basic functionality using NestJS. This is the 2nd part of this section, the Filters.</p><p class=\"medium-feed-link\"><a href=\"https://blog.stackademic.com/nestjs-elastic-search-filters-part-2-221af9a7b06e?source=rss-f8ee0b07ef4d------2\">Continue reading on Stackademic »</a></p></div>",
+      "link": "https://blog.stackademic.com/nestjs-elastic-search-filters-part-2-221af9a7b06e?source=rss-f8ee0b07ef4d------2",
+      "publishedAt": 1715361027000,
+      "categories": [
+        {
+          "name": "nodejs",
+          "link": "https://medium.com/tag/nodejs"
+        },
+        {
+          "name": "web-development",
+          "link": "https://medium.com/tag/web-development"
+        },
+        {
+          "name": "elasticsearch",
+          "link": "https://medium.com/tag/elasticsearch"
+        },
+        {
+          "name": "backend",
+          "link": "https://medium.com/tag/backend"
+        },
+        {
+          "name": "nestjs",
+          "link": "https://medium.com/tag/nestjs"
+        }
+      ]
+    },
+    {
+      "id": "https://medium.com/p/ef39c59e763d",
+      "title": "NestJS - Elastic Search - Basics - Part 1",
+      "description": "<div class=\"medium-feed-item\"><p class=\"medium-feed-image\"><a href=\"https://blog.stackademic.com/nestjs-elastic-search-basics-part-1-ef39c59e763d?source=rss-f8ee0b07ef4d------2\"><img src=\"https://cdn-images-1.medium.com/max/1792/1*S9gAN-tL90L7aeSbxqfBvA.jpeg\" width=\"1792\"></a></p><p class=\"medium-feed-snippet\">In this section, we are introducing elastic search basic functionality using NestJS. This is the 1st part of this section, the Basics.</p><p class=\"medium-feed-link\"><a href=\"https://blog.stackademic.com/nestjs-elastic-search-basics-part-1-ef39c59e763d?source=rss-f8ee0b07ef4d------2\">Continue reading on Stackademic »</a></p></div>",
+      "link": "https://blog.stackademic.com/nestjs-elastic-search-basics-part-1-ef39c59e763d?source=rss-f8ee0b07ef4d------2",
+      "publishedAt": 1715360980000,
+      "categories": [
+        {
+          "name": "web-development",
+          "link": "https://medium.com/tag/web-development"
+        },
+        {
+          "name": "nodejs",
+          "link": "https://medium.com/tag/nodejs"
+        },
+        {
+          "name": "backend",
+          "link": "https://medium.com/tag/backend"
+        },
+        {
+          "name": "elasticsearch",
+          "link": "https://medium.com/tag/elasticsearch"
+        },
+        {
+          "name": "nestjs",
+          "link": "https://medium.com/tag/nestjs"
+        }
+      ]
+    },
+    {
+      "id": "https://medium.com/p/0ea5b30f14f5",
+      "title": "NestJS - Monitoring - Metrics (Prometheus)",
+      "description": "<div class=\"medium-feed-item\"><p class=\"medium-feed-image\"><a href=\"https://blog.stackademic.com/nestjs-monitoring-metrics-prometheus-0ea5b30f14f5?source=rss-f8ee0b07ef4d------2\"><img src=\"https://cdn-images-1.medium.com/max/720/0*Y_NMtBO7RxyyfOX9.png\" width=\"720\"></a></p><p class=\"medium-feed-snippet\">In this section, we&#x2019;ll introduce a new Prometheus Module that can help you monitor your applications and feed production-grade monitoring&#x2026;</p><p class=\"medium-feed-link\"><a href=\"https://blog.stackademic.com/nestjs-monitoring-metrics-prometheus-0ea5b30f14f5?source=rss-f8ee0b07ef4d------2\">Continue reading on Stackademic »</a></p></div>",
+      "link": "https://blog.stackademic.com/nestjs-monitoring-metrics-prometheus-0ea5b30f14f5?source=rss-f8ee0b07ef4d------2",
+      "publishedAt": 1706562268000,
+      "categories": [
+        {
+          "name": "nestjs",
+          "link": "https://medium.com/tag/nestjs"
+        },
+        {
+          "name": "nodejs",
+          "link": "https://medium.com/tag/nodejs"
+        },
+        {
+          "name": "monitoring",
+          "link": "https://medium.com/tag/monitoring"
+        },
+        {
+          "name": "web-development",
+          "link": "https://medium.com/tag/web-development"
+        },
+        {
+          "name": "backend",
+          "link": "https://medium.com/tag/backend"
+        }
+      ]
+    },
+    {
+      "id": "https://medium.com/p/29b03fe1666a",
+      "title": "NestJS - Getting Started",
+      "link": "https://medium.com/@nikoikonomou92/nestjs-getting-started-29b03fe1666a?source=rss-f8ee0b07ef4d------2",
+      "publishedAt": 1706377302000,
+      "categories": [
+        {
+          "name": "nodejs",
+          "link": "https://medium.com/tag/nodejs"
+        },
+        {
+          "name": "nestjs",
+          "link": "https://medium.com/tag/nestjs"
+        },
+        {
+          "name": "web-development",
+          "link": "https://medium.com/tag/web-development"
+        },
+        {
+          "name": "backend",
+          "link": "https://medium.com/tag/backend"
+        }
+      ]
+    },
+    {
+      "id": "https://medium.com/p/7b0aec4797d3",
+      "title": "NestJS - A Complete Guide",
+      "link": "https://medium.com/@nikoikonomou92/nestjs-a-complete-guide-7b0aec4797d3?source=rss-f8ee0b07ef4d------2",
+      "publishedAt": 1706377302000,
+      "categories": [
+        {
+          "name": "nestjs",
+          "link": "https://medium.com/tag/nestjs"
+        },
+        {
+          "name": "nodejs",
+          "link": "https://medium.com/tag/nodejs"
+        },
+        {
+          "name": "web-development",
+          "link": "https://medium.com/tag/web-development"
+        },
+        {
+          "name": "backend",
+          "link": "https://medium.com/tag/backend"
+        },
+        {
+          "name": "guides-and-tutorials",
+          "link": "https://medium.com/tag/guides-and-tutorials"
+        }
+      ]
+    },
+    {
+      "id": "https://medium.com/p/80117b282428",
+      "title": "NestJS - Logging (Winston)",
+      "description": "<div class=\"medium-feed-item\"><p class=\"medium-feed-image\"><a href=\"https://blog.stackademic.com/nestjs-logging-winston-80117b282428?source=rss-f8ee0b07ef4d------2\"><img src=\"https://cdn-images-1.medium.com/max/1792/1*HIhuDxaFnnK36z4NllYVGg.png\" width=\"1792\"></a></p><p class=\"medium-feed-snippet\">In this section, we&#x2019;ll introduce a new Logger Module that can help our NestJS logs to work well with production-grade log management&#x2026;</p><p class=\"medium-feed-link\"><a href=\"https://blog.stackademic.com/nestjs-logging-winston-80117b282428?source=rss-f8ee0b07ef4d------2\">Continue reading on Stackademic »</a></p></div>",
+      "link": "https://blog.stackademic.com/nestjs-logging-winston-80117b282428?source=rss-f8ee0b07ef4d------2",
+      "publishedAt": 1706377302000,
+      "categories": [
+        {
+          "name": "nestjs",
+          "link": "https://medium.com/tag/nestjs"
+        },
+        {
+          "name": "nodejs",
+          "link": "https://medium.com/tag/nodejs"
+        },
+        {
+          "name": "web-development",
+          "link": "https://medium.com/tag/web-development"
+        },
+        {
+          "name": "backend",
+          "link": "https://medium.com/tag/backend"
+        },
+        {
+          "name": "winston",
+          "link": "https://medium.com/tag/winston"
+        }
+      ]
+    },
+    {
+      "id": "https://medium.com/p/383edea08f0b",
+      "title": "NestJS - Redis",
+      "link": "https://medium.com/@nikoikonomou92/nestjs-redis-383edea08f0b?source=rss-f8ee0b07ef4d------2",
+      "publishedAt": 1706377098000,
+      "categories": [
+        {
+          "name": "backend",
+          "link": "https://medium.com/tag/backend"
+        },
+        {
+          "name": "nodejs",
+          "link": "https://medium.com/tag/nodejs"
+        },
+        {
+          "name": "nestjs",
+          "link": "https://medium.com/tag/nestjs"
+        },
+        {
+          "name": "redis",
+          "link": "https://medium.com/tag/redis"
+        },
+        {
+          "name": "web-development",
+          "link": "https://medium.com/tag/web-development"
+        }
+      ]
+    },
+    {
+      "id": "https://medium.com/p/f79542f814e5",
+      "title": "NestJS - Cookies",
+      "link": "https://medium.com/@nikoikonomou92/nestjs-cookies-f79542f814e5?source=rss-f8ee0b07ef4d------2",
+      "publishedAt": 1706377018000,
+      "categories": [
+        {
+          "name": "nodejs",
+          "link": "https://medium.com/tag/nodejs"
+        },
+        {
+          "name": "web-development",
+          "link": "https://medium.com/tag/web-development"
+        },
+        {
+          "name": "backend",
+          "link": "https://medium.com/tag/backend"
+        },
+        {
+          "name": "nestjs",
+          "link": "https://medium.com/tag/nestjs"
+        },
+        {
+          "name": "cookies",
+          "link": "https://medium.com/tag/cookies"
+        }
+      ]
+    }
+  ]
+}

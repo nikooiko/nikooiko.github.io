@@ -8,6 +8,7 @@
     "gatsby"
   ],
   "scripts": {
+    "predevelop": "npm run fetch:articles",
     "develop": "gatsby develop",
     "start": "gatsby develop",
     "build": "gatsby build",
@@ -15,7 +16,8 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "typecheck": "tsc --noEmit",
-    "deploy": "npm run build && gh-pages -d public"
+    "deploy": "npm run build && gh-pages -d public",
+    "fetch:articles": "node bin/fetch-articles.js"
   },
   "dependencies": {
     "@radix-ui/react-avatar": "^1.0.4",

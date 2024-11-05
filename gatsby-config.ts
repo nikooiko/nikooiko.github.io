@@ -36,6 +36,14 @@ const config: GatsbyConfig = {
       __key: "images",
     },
     {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "data",
+        path: "./src/data/",
+      },
+      __key: "data",
+    },
+    {
       resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
