@@ -57,11 +57,11 @@ const ArticleCard: React.FC<{ article: ArticleType }> = ({ article }) => {
         </div>
         <div className="p-4">
           <h2 className="text-xl font-bold tracking-tight">{article.title}</h2>
-          <p className="mt-2 text-sm font-normal text-stone-400 dark:text-stone-500">
+          <time className="mt-2 text-sm font-normal text-stone-500 dark:text-stone-300">
             {formatDate(article.publishedAt, "dd MMM. yyyy")}
-          </p>
+          </time>
           <ArticleCategories article={article} />
-          <div className="mt-2 line-clamp-3 text-muted-foreground">
+          <div className="mt-2 line-clamp-3 text-stone-600 dark:text-stone-300">
             <p dangerouslySetInnerHTML={{ __html: article.shortHTML }} />
           </div>
         </div>

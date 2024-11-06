@@ -135,7 +135,7 @@ export const TimelineEntry: React.FC<TimelineEntryProps> = ({
           </div>
           {h.hightlights?.length && (
             <>
-              <h5 className="font-semibold mt-4 italic">Key Highlights</h5>
+              <h4 className="font-semibold mt-4 italic">Key Highlights</h4>
               <ul className="mt-2 list-disc list-inside text-sm italic">
                 {h.hightlights.map((highlight, hIndex) => (
                   <li key={hIndex} className="flex items-start">

@@ -21,7 +21,7 @@ export const FeaturedArticle: React.FC<{ article: Article }> = ({
           />
           <Button size="lg" asChild>
             <a href={article.link} target="_blank">
-              Read more
+              Read full article
               <ChevronRight className="w-5 h-5 ml-2" />
             </a>
           </Button>
