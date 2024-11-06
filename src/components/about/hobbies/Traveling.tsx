@@ -106,7 +106,7 @@ export const Traveling: React.FC = () => {
               </TooltipTrigger>
               <TooltipContent
                 side="bottom"
-                className="py-0 px-2 dark:bg-stone-700 dark:text-stone-100 rounded"
+                className="py-0 px-2 bg-background dark:bg-stone-800  rounded"
               >
                 {name}
               </TooltipContent>

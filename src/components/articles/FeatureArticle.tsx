@@ -31,7 +31,7 @@ export const FeaturedArticle: React.FC<{ article: Article }> = ({
             image={article.image}
             alt="Featured Article Image"
             objectFit="cover"
-            className="w-full h-full order-first sm:order-last"
+            className="w-full h-full order-first sm:order-last aspect-[600/400]"
           />
         ) : (
           <StaticImage
