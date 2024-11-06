@@ -93,7 +93,7 @@ export const TimelineEntry: React.FC<TimelineEntryProps> = ({
           ))}
         </div>
       )}
-      <div className="text-base font-normal text-stone-500 dark:text-stone-300">
+      <div className="text-base font-normal text-stone-600 dark:text-stone-300">
         {what}
       </div>
       {hightlights?.length && (
@@ -130,7 +130,7 @@ export const TimelineEntry: React.FC<TimelineEntryProps> = ({
           <h3 className="text-lg font-semibold text-stone-900 dark:text-stone-100">
             {h.as}
           </h3>
-          <div className=" text-base font-normal text-stone-500 dark:text-stone-300">
+          <div className=" text-base font-normal text-stone-600 dark:text-stone-300">
             {h.what}
           </div>
           {h.hightlights?.length && (

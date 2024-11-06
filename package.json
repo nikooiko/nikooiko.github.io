@@ -8,7 +8,6 @@
     "gatsby"
   ],
   "scripts": {
-    "predevelop": "npm run fetch:articles",
     "develop": "gatsby develop",
     "start": "gatsby develop",
     "build": "gatsby build",
@@ -35,11 +34,14 @@
     "gatsby-plugin-image": "^3.13.1",
     "gatsby-plugin-postcss": "^6.13.1",
     "gatsby-plugin-react-svg": "^3.3.0",
+    "gatsby-plugin-remote-images": "^3.6.6",
     "gatsby-plugin-sharp": "^5.13.1",
     "gatsby-plugin-sitemap": "^6.13.1",
     "gatsby-source-filesystem": "^5.13.1",
+    "gatsby-transformer-json": "^5.13.1",
     "gatsby-transformer-sharp": "^5.13.1",
     "lucide-react": "^0.454.0",
+    "node-html-parser": "^6.1.13",
     "postcss": "^8.4.35",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

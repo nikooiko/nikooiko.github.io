@@ -23,10 +23,9 @@ const config: GatsbyConfig = {
   graphqlTypegen: true,
   plugins: [
     "gatsby-plugin-postcss",
-    "gatsby-plugin-image",
     "gatsby-plugin-sitemap",
-    "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
+
+    // Static Images and SVGs
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -36,14 +35,6 @@ const config: GatsbyConfig = {
       __key: "images",
     },
     {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "data",
-        path: "./src/data/",
-      },
-      __key: "data",
-    },
-    {
       resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
@@ -51,6 +42,31 @@ const config: GatsbyConfig = {
         },
       },
     },
+
+    // Source JSON data
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "data",
+        path: `${__dirname}/src/data`,
+      },
+    },
+    "gatsby-transformer-json",
+
+    // Remote images plugin
+    {
+      resolve: `gatsby-plugin-remote-images`,
+      options: {
+        nodeType: "ArticlesJson", // Matches the type created from JSON files
+        imagePath: "imageURL", // Field in JSON file with image URLs
+        name: "remoteImage", // The field name for the generated image node
+      },
+    },
+
+    // Image optimization plugins
+    `gatsby-plugin-image`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
   ],
 };
 

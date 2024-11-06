@@ -14,7 +14,7 @@ export const Layout: React.FC<{
     { href: "/articles/", label: "Articles" },
   ];
   return (
-    <main className="flex flex-col justify-center items-center w-full h-full">
+    <main className="flex flex-col justify-center items-center w-full h-full bg-stone-50 dark:bg-stone-900">
       <ThemeProvider defaultTheme="light">
         <div className="w-full flex flex-col justify-center items-center">
           <div className="flex p-2 justify-between items-center gap-2 w-full border-b border-divider max-w-xl">
