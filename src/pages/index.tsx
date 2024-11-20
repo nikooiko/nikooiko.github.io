@@ -22,7 +22,7 @@ export default IndexPage;
 export const Head = () => (
   <>
     <html lang="en" />
-    <title>About - Nikos Oikonomou</title>
+    <title>About Nikos Oikonomou</title>
     <meta
       name="description"
       content="Personal page of Nikos Oikonomou. Provides information about the experience, education, skills, hobbies, and interests."

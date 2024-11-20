@@ -42,7 +42,7 @@ export default ArticlesPage;
 export const Head = () => (
   <>
     <html lang="en" />
-    <title>Articles - Nikos Oikonomou</title>
+    <title>Articles by Nikos Oikonomou</title>
     <meta
       name="description"
       content="Articles written by Nikos Oikonomou. Provides the descriptions, images and the links of available articles. Mostly about backend using NodeJS/NestJS and web development in general"
