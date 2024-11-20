@@ -372,8 +372,8 @@ const experience: TimelineEntryProps[] = [
             <p className="text-justify">
               With the help of our team, I started scaling our department by
               adding more members to it and I worked closely with all team leads
-              to make sure we identify and understand any personal or team
-              problem and try to resolve it as fast as possible.
+              to make sure we identified and understood any personal or team
+              problem and tried to resolve it as fast as possible.
             </p>
             <br />
             <p className="text-justify">
@@ -396,7 +396,7 @@ const experience: TimelineEntryProps[] = [
           </span>,
           <span>
             <b>
-              <u>Lead the hiring process</u>
+              <u>Led the hiring process</u>
             </b>
             , added team members, closely{" "}
             <b>
@@ -422,7 +422,7 @@ const experience: TimelineEntryProps[] = [
           <>
             <p className="text-justify">
               In 2018, I became a senior software engineer and leader of
-              Centaur’s embedded team and in parallel I was supporting the web
+              Centaur’s embedded team, and in parallel, I was supporting the web
               team by taking some load off of their hands when a critical
               deadline approached. This allowed me to rapidly create truly
               end-to-end solutions, ranging from the embedded device to the
@@ -435,8 +435,8 @@ const experience: TimelineEntryProps[] = [
             </p>
             <br />
             <p className="text-justify">
-              Occasionally, on the side, I was supporting the field engineers,
-              and sometimes I directly communicated with the clients to resolve
+              Occasionally, on the side, I supported the field engineers, and
+              sometimes I directly communicated with the clients to resolve
               their issues.
             </p>
           </>
