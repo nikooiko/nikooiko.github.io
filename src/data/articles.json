@@ -1,8 +1,39 @@
 [
   {
+    "id": "https://medium.com/p/b0af24b02448",
+    "title": "NestJS - Security - Basics - Helmet.js / CORS",
+    "description": "<div class=\"medium-feed-item\"><p class=\"medium-feed-image\"><a href=\"https://blog.stackademic.com/nestjs-security-basics-helmet-js-cors-b0af24b02448?source=rss-f8ee0b07ef4d------2\"><img src=\"https://cdn-images-1.medium.com/max/1792/1*Fgl_618sT25wsVAj8m2Sgw.jpeg\" width=\"1792\"></a></p><p class=\"medium-feed-snippet\">In this section, we introduce key mechanisms - such as Helmet.js and CORS - to enhance the security of your NestJS application.</p><p class=\"medium-feed-link\"><a href=\"https://blog.stackademic.com/nestjs-security-basics-helmet-js-cors-b0af24b02448?source=rss-f8ee0b07ef4d------2\">Continue reading on Stackademic »</a></p></div>",
+    "link": "https://blog.stackademic.com/nestjs-security-basics-helmet-js-cors-b0af24b02448?source=rss-f8ee0b07ef4d------2",
+    "publishedAt": 1735573311000,
+    "categories": [
+      {
+        "name": "backend",
+        "link": "https://medium.com/tag/backend"
+      },
+      {
+        "name": "web-development",
+        "link": "https://medium.com/tag/web-development"
+      },
+      {
+        "name": "nestjs",
+        "link": "https://medium.com/tag/nestjs"
+      },
+      {
+        "name": "security",
+        "link": "https://medium.com/tag/security"
+      },
+      {
+        "name": "nodejs",
+        "link": "https://medium.com/tag/nodejs"
+      }
+    ],
+    "imageURL": "https://cdn-images-1.medium.com/max/1792/1*Fgl_618sT25wsVAj8m2Sgw.jpeg",
+    "shortHTML": "In this section, we introduce key mechanisms - such as Helmet.js and CORS - to enhance the security of your NestJS application."
+  },
+  {
     "id": "https://medium.com/p/2ecfd26848d4",
     "title": "Synchronization/Locking with Redis & Node.js",
-    "description": "<div class=\"medium-feed-item\"><p class=\"medium-feed-image\"><a href=\"https://blog.stackademic.com/synchronization-locking-with-redis-nodejs-2ecfd26848d4?source=rss-f8ee0b07ef4d------2\"><img src=\"https://cdn-images-1.medium.com/max/1792/1*xT_b7yg5zrNH_Hlzmu-plg.jpeg\" width=\"1792\"></a></p><p class=\"medium-feed-snippet\">This guide introduces Redis-based mechanisms (compare and swap &amp; counting semaphores) for synchronization and access control of shared&#x2026;</p><p class=\"medium-feed-link\"><a href=\"https://blog.stackademic.com/synchronization-locking-with-redis-nodejs-2ecfd26848d4?source=rss-f8ee0b07ef4d------2\">Continue reading on Stackademic »</a></p></div>",
+    "description": "<div class=\"medium-feed-item\"><p class=\"medium-feed-image\"><a href=\"https://blog.stackademic.com/synchronization-locking-with-redis-nodejs-2ecfd26848d4?source=rss-f8ee0b07ef4d------2\"><img src=\"https://cdn-images-1.medium.com/max/1792/1*xT_b7yg5zrNH_Hlzmu-plg.jpeg\" width=\"1792\"></a></p><p class=\"medium-feed-snippet\">This guide introduces Redis-based mechanisms (compare and swap &amp; counting semaphores) for synchronization and access control over shared&#x2026;</p><p class=\"medium-feed-link\"><a href=\"https://blog.stackademic.com/synchronization-locking-with-redis-nodejs-2ecfd26848d4?source=rss-f8ee0b07ef4d------2\">Continue reading on Stackademic »</a></p></div>",
     "link": "https://blog.stackademic.com/synchronization-locking-with-redis-nodejs-2ecfd26848d4?source=rss-f8ee0b07ef4d------2",
     "publishedAt": 1716577177000,
     "categories": [
@@ -28,7 +59,7 @@
       }
     ],
     "imageURL": "https://cdn-images-1.medium.com/max/1792/1*xT_b7yg5zrNH_Hlzmu-plg.jpeg",
-    "shortHTML": "This guide introduces Redis-based mechanisms (compare and swap &amp; counting semaphores) for synchronization and access control of shared&#x2026;"
+    "shortHTML": "This guide introduces Redis-based mechanisms (compare and swap &amp; counting semaphores) for synchronization and access control over shared&#x2026;"
   },
   {
     "id": "https://medium.com/p/7cf03d9303ce",
