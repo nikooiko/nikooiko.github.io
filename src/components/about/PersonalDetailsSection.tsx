@@ -21,7 +21,7 @@ export const PersonalDetailsSection: React.FC = () => {
             <Github size="32" aria-label="github icon" />
           </a>
           <a
-            href="https://medium.com/@nikoikonomou92"
+            href="https://nikooiko.medium.com"
             target="_blank"
             arial-label="Navigate to medium.com page"
             className="w-8 h-8 dark:text-white"
