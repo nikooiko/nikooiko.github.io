@@ -30,7 +30,7 @@ function extractFromDescription(rawArticle) {
 async function fetchArticles() {
   const items = [];
   try {
-    const data = await rssJsonParse("https://medium.com/feed/@nikoikonomou92");
+    const data = await rssJsonParse("https://medium.com/feed/@nikooiko");
     for (const item of data.items) {
       items.push({
         id: item.id,

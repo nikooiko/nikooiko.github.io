@@ -1,5 +1,36 @@
 [
   {
+    "id": "https://medium.com/p/cf03f11cef90",
+    "title": "NestJS - Security - Basics - CSRF",
+    "description": "<div class=\"medium-feed-item\"><p class=\"medium-feed-image\"><a href=\"https://blog.stackademic.com/nestjs-security-basics-csrf-cf03f11cef90?source=rss-f8ee0b07ef4d------2\"><img src=\"https://cdn-images-1.medium.com/max/1792/1*Fgl_618sT25wsVAj8m2Sgw.jpeg\" width=\"1792\"></a></p><p class=\"medium-feed-snippet\">In this section, we introduce CSRF to enhance the security of your NestJS application.</p><p class=\"medium-feed-link\"><a href=\"https://blog.stackademic.com/nestjs-security-basics-csrf-cf03f11cef90?source=rss-f8ee0b07ef4d------2\">Continue reading on Stackademic »</a></p></div>",
+    "link": "https://blog.stackademic.com/nestjs-security-basics-csrf-cf03f11cef90?source=rss-f8ee0b07ef4d------2",
+    "publishedAt": 1735916498000,
+    "categories": [
+      {
+        "name": "web-development",
+        "link": "https://medium.com/tag/web-development"
+      },
+      {
+        "name": "security",
+        "link": "https://medium.com/tag/security"
+      },
+      {
+        "name": "nestjs",
+        "link": "https://medium.com/tag/nestjs"
+      },
+      {
+        "name": "backend",
+        "link": "https://medium.com/tag/backend"
+      },
+      {
+        "name": "nodejs",
+        "link": "https://medium.com/tag/nodejs"
+      }
+    ],
+    "imageURL": "https://cdn-images-1.medium.com/max/1792/1*Fgl_618sT25wsVAj8m2Sgw.jpeg",
+    "shortHTML": "In this section, we introduce CSRF to enhance the security of your NestJS application."
+  },
+  {
     "id": "https://medium.com/p/b0af24b02448",
     "title": "NestJS - Security - Basics - Helmet.js / CORS",
     "description": "<div class=\"medium-feed-item\"><p class=\"medium-feed-image\"><a href=\"https://blog.stackademic.com/nestjs-security-basics-helmet-js-cors-b0af24b02448?source=rss-f8ee0b07ef4d------2\"><img src=\"https://cdn-images-1.medium.com/max/1792/1*Fgl_618sT25wsVAj8m2Sgw.jpeg\" width=\"1792\"></a></p><p class=\"medium-feed-snippet\">In this section, we introduce key mechanisms - such as Helmet.js and CORS - to enhance the security of your NestJS application.</p><p class=\"medium-feed-link\"><a href=\"https://blog.stackademic.com/nestjs-security-basics-helmet-js-cors-b0af24b02448?source=rss-f8ee0b07ef4d------2\">Continue reading on Stackademic »</a></p></div>",
