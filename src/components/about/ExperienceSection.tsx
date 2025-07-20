@@ -134,16 +134,47 @@ const experience: TimelineEntryProps[] = [
         ),
         hightlights: [
           <span>
-            Formed a <b>cross-squad leadership structure</b> by empowering
-            senior engineers as Tech Leads and establishing a third{" "}
-            <b>innovation-focused team</b> with <b>architectural oversight</b>{" "}
+            Formed a{" "}
+            <b>
+              <u>cross-squad leadership structure</u>
+            </b>{" "}
+            by empowering senior engineers as Tech Leads and establishing a
+            third{" "}
+            <b>
+              <u>innovation-focused team</u>
+            </b>{" "}
+            with{" "}
+            <b>
+              <u>architectural oversight</u>
+            </b>{" "}
             responsibilities.
           </span>,
           <span>
-            Collaborated closely with <b>Product and Design leadership</b> to
-            align <b>roadmap priorities</b> with long-term{" "}
-            <b>technical strategy</b>, balancing <b>speed</b>,{" "}
-            <b>maintainability</b>, and <b>scalability</b>.
+            Collaborated closely with{" "}
+            <b>
+              <u>Product and Design leadership</u>
+            </b>{" "}
+            to align{" "}
+            <b>
+              <u>roadmap priorities</u>
+            </b>{" "}
+            with long-term{" "}
+            <b>
+              <u>technical strategy</u>
+            </b>
+            , balancing{" "}
+            <b>
+              <u>speed</u>
+            </b>
+            ,{" "}
+            <b>
+              <u>maintainability</u>
+            </b>
+            , and{" "}
+            <b>
+              <u>scalability</u>
+            </b>
+            .
           </span>,
         ],
       },
