@@ -119,8 +119,38 @@ const experience: TimelineEntryProps[] = [
     ],
     history: [
       {
+        as: "VP of Engineering",
+        start: new Date("2025-01-01T12:00:00.000Z"),
+        what: (
+          <p className="text-justify">
+            After serving as Principal Engineer, I transitioned into the role of
+            VP of Engineering to lead the company’s growing technical
+            organization. My focus shifted from deep technical involvement to
+            high-level engineering management, team scalability, and strategic
+            alignment with product and business goals. I now oversee multiple
+            squads, guide the engineering vision, and ensure operational
+            excellence across projects.
+          </p>
+        ),
+        hightlights: [
+          <span>
+            Formed a <b>cross-squad leadership structure</b> by empowering
+            senior engineers as Tech Leads and establishing a third{" "}
+            <b>innovation-focused team</b> with <b>architectural oversight</b>{" "}
+            responsibilities.
+          </span>,
+          <span>
+            Collaborated closely with <b>Product and Design leadership</b> to
+            align <b>roadmap priorities</b> with long-term{" "}
+            <b>technical strategy</b>, balancing <b>speed</b>,{" "}
+            <b>maintainability</b>, and <b>scalability</b>.
+          </span>,
+        ],
+      },
+      {
         as: "Principal Engineer",
         start: new Date("2023-11-01T12:00:00.000Z"),
+        end: new Date("2025-01-01T12:00:00.000Z"),
         what: (
           <p className="text-justify">
             In 2023, I started switching into a less team oriented role, handed
@@ -157,6 +187,11 @@ const experience: TimelineEntryProps[] = [
               <u>hiring</u>
             </b>{" "}
             to expand the team.
+          </span>,
+          <span>
+            Oversaw the <b>modernization of internal systems</b> and accelerated
+            the adoption of <b>security</b>, <b>SEO</b>, and{" "}
+            <b>AI-related initiatives</b> across the platform.
           </span>,
         ],
       },
@@ -608,7 +643,6 @@ export const ExperienceSection: React.FC = () => {
         <h2 className="text-2xl font-bold py-2">Work Experience</h2>
         <OrderByButton
           onOrderChange={(order) => {
-            console.log("change-order", order);
             setExperienceOrder(order);
           }}
         />
