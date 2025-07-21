@@ -35,14 +35,13 @@ const education: TimelineEntryProps[] = [
               Electrical and Computer Engineering.
             </a>
             <p className="mt-4 text-justify">
-              As a student, I was intrigued by software development, especially
-              low-level programming. At first, I focused mainly on system-level
-              programming (POSIX), distributed systems, computer architecture
-              (assembly/Verilog), and high-performance computing (CUDA/OpenMP),
-              while at the same time, I started my first steps as a web
-              developer by building various web applications. Later, I focused
-              on embedded systems and ad hoc wireless sensor networks, which
-              allowed me to enter the IoT world and build end-to-end solutions.
+              My academic journey focused on <b>low-level programming</b> and{" "}
+              <b>distributed systems</b>, starting with system-level programming
+              (POSIX) and computer architecture. I specialized in
+              <b> embedded systems</b> and <b>wireless sensor networks</b>,
+              which led me into the IoT domain and enabled me to build
+              comprehensive end-to-end solutions. This foundation continues to
+              influence my approach to scalable, reliable software architecture.
             </p>
           </>
         ),

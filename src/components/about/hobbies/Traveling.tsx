@@ -107,6 +107,10 @@ export const Traveling: React.FC = () => {
         <Luggage className="w-8" />
         <h3 className="text-xl pr-1">Traveling ({countries.length} of 195)</h3>
       </div>
+      <p className="text-sm text-muted-foreground mt-1 px-1">
+        Exploring diverse cultures and landscapes across Europe and North
+        America.
+      </p>
       <div className="flex flex-wrap gap-1 mt-2 px-1">
         {countries.map(({ name, Flag }) => (
           <TooltipProvider key={name}>

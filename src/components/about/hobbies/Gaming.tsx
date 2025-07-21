@@ -37,6 +37,10 @@ export const Gaming: React.FC = () => {
         <Gamepad2 className="w-8" />
         <h3 className="text-xl pr-1">Gaming</h3>
       </div>
+      <p className="text-sm text-muted-foreground mt-1 px-1">
+        Passionate about challenging RPGs and immersive storytelling
+        experiences.
+      </p>
       <div className="grid grid-cols-2 gap-2 px-1 mt-2 text-sm">
         {items.map((item) => (
           <div key={item.title} className="flex flex-col">

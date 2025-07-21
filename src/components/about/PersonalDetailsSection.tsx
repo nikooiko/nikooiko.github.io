@@ -56,10 +56,13 @@ export const PersonalDetailsSection: React.FC = () => {
           Hello I'm <b>Nikos Oikonomou</b>!
         </h1>
         <p className="text-justify">
-          I'm a seasoned software engineer with a strong Web Development and IoT
-          background. I'm more focused on the back end but I like contributing
-          to any part of the stack. I'm currently a Principal Engineer leading
-          the engineering teams of Kariera Group, a global HR solution provider.
+          I'm a <b>Software Engineer</b> with over a decade of experience
+          building scalable software solutions. I specialize in{" "}
+          <b>backend development</b> and <b>distributed systems</b>, with a
+          passion for
+          <b> IoT platforms</b> and <b>cloud infrastructure</b>. Currently
+          leading engineering teams at Kariera Group, I focus on delivering
+          high-impact solutions that scale from startup to enterprise.
         </p>
         <Button asChild className="mt-2">
           <a
