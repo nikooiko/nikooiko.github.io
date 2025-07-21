@@ -429,27 +429,19 @@ const experience: TimelineEntryProps[] = [
         what: (
           <>
             <p className="text-justify">
-              In 2021, I became Centaur's Director Of Engineering in charge of
-              leading the Centaur's R&D department. I lead the Product
-              Development process and orchestrated the entire team's task
-              workflow.
+              In 2021, I became Centaur's Director of Engineering, leading the
+              R&D department and orchestrating the Product Development process
+              and team workflow. I scaled the department by adding team members
+              and worked closely with team leads to identify and resolve
+              personal and team challenges quickly.
             </p>
             <br />
             <p className="text-justify">
-              With the help of our team, I started scaling our department by
-              adding more members to it and I worked closely with all team leads
-              to make sure we identified and understood any personal or team
-              problem and tried to resolve it as fast as possible.
-            </p>
-            <br />
-            <p className="text-justify">
-              Finally, as I was already experienced with Centaur's cloud
-              infrastructure I started working with our DevOps team to identify
-              and resolve cluster and deployment issues. To make our cloud more
-              stable and easier to monitor and at the same time build my DevOps
-              knowledge, I started upgrading our technology to use more modern
-              tools and versions and moved our cluster from self-managed to
-              provider-managed.
+              Leveraging my experience with Centaur's cloud infrastructure, I
+              collaborated with the DevOps team to identify and resolve cluster
+              and deployment issues. I upgraded our technology stack to modern
+              tools and versions, migrating our cluster from self-managed to
+              provider-managed for improved stability and monitoring.
             </p>
           </>
         ),
@@ -458,7 +450,7 @@ const experience: TimelineEntryProps[] = [
             <b>
               <u>Orchestrated Product Development</u>
             </b>{" "}
-            and the department’s workflow.
+            and the department's workflow.
           </span>,
           <span>
             <b>
@@ -478,6 +470,16 @@ const experience: TimelineEntryProps[] = [
             </b>
             .
           </span>,
+          <span>
+            <b>
+              <u>Modernized cloud infrastructure</u>
+            </b>{" "}
+            by upgrading technology stack and migrating from{" "}
+            <b>
+              <u>self-managed to provider-managed</u>
+            </b>{" "}
+            Kubernetes cluster for improved stability and monitoring.
+          </span>,
         ],
       },
       {
@@ -488,22 +490,17 @@ const experience: TimelineEntryProps[] = [
           <>
             <p className="text-justify">
               In 2018, I became a senior software engineer and leader of
-              Centaur’s embedded team, and in parallel, I was supporting the web
-              team by taking some load off of their hands when a critical
-              deadline approached. This allowed me to rapidly create truly
-              end-to-end solutions, ranging from the embedded device to the
-              client application.
+              Centaur's embedded team, while supporting the web team during
+              critical deadlines. This enabled me to create truly end-to-end
+              solutions, ranging from embedded devices to client applications,
+              and manage the backlog, coordinate the team, and interview/train
+              new members.
             </p>
             <br />
             <p className="text-justify">
-              I was also responsible for managing the backlog, coordinating the
-              team, and interviewing/training new team members.
-            </p>
-            <br />
-            <p className="text-justify">
-              Occasionally, on the side, I supported the field engineers, and
-              sometimes I directly communicated with the clients to resolve
-              their issues.
+              I also supported field engineers and directly communicated with
+              clients to resolve issues, ensuring comprehensive problem-solving
+              across all aspects of the product lifecycle.
             </p>
           </>
         ),
