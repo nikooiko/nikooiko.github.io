@@ -146,7 +146,15 @@ const experience: TimelineEntryProps[] = [
             <b>
               <u>architectural oversight</u>
             </b>{" "}
-            responsibilities.
+            responsibilities, overseeing{" "}
+            <b>
+              <u>3 engineering squads</u>
+            </b>{" "}
+            and{" "}
+            <b>
+              <u>15+ developers</u>
+            </b>
+            .
           </span>,
           <span>
             Collaborated closely with{" "}
@@ -172,6 +180,10 @@ const experience: TimelineEntryProps[] = [
             , and{" "}
             <b>
               <u>scalability</u>
+            </b>{" "}
+            across{" "}
+            <b>
+              <u>multiple high-impact projects</u>
             </b>
             .
           </span>,
@@ -217,9 +229,19 @@ const experience: TimelineEntryProps[] = [
             to expand the team.
           </span>,
           <span>
-            Oversaw the <b>modernization of internal systems</b> and accelerated
-            the adoption of <b>security</b>, <b>SEO</b>, and{" "}
-            <b>AI-related initiatives</b> across the platform.
+            Oversaw the{" "}
+            <b>
+              <u>modernization of internal systems</u>
+            </b>{" "}
+            and accelerated the adoption of{" "}
+            <b>
+              <u>security</u>
+            </b>
+            , <b>SEO</b>, and{" "}
+            <b>
+              <u>AI-related initiatives</u>
+            </b>{" "}
+            across the platform.
           </span>,
         ],
       },
