@@ -123,13 +123,12 @@ const experience: TimelineEntryProps[] = [
         start: new Date("2025-01-01T12:00:00.000Z"),
         what: (
           <p className="text-justify">
-            After serving as Principal Engineer, I transitioned into the role of
-            VP of Engineering to lead the company’s growing technical
-            organization. My focus shifted from deep technical involvement to
-            high-level engineering management, team scalability, and strategic
-            alignment with product and business goals. I now oversee multiple
-            squads, guide the engineering vision, and ensure operational
-            excellence across projects.
+            Promoted to VP of Engineering to lead the company's growing
+            technical organization. My focus shifted from deep technical
+            involvement to high-level engineering management, team scalability,
+            and strategic alignment with product and business goals. I now
+            oversee multiple squads, guide the engineering vision, and ensure
+            operational excellence across projects.
           </p>
         ),
         hightlights: [
@@ -184,13 +183,11 @@ const experience: TimelineEntryProps[] = [
         end: new Date("2025-01-01T12:00:00.000Z"),
         what: (
           <p className="text-justify">
-            In 2023, I started switching into a less team oriented role, handed
-            over the Tech Lead role to another team member and started working
-            towards building a second team from the ground up. Together with
-            both teams, we are currently working on evolving our technology and
-            bringing in more sophisticated features to our platform while
-            maintaining a very strong focus on the quality of our code and the
-            reliability of our services.
+            Transitioned into a less team-oriented role, handing over the Tech
+            Lead position to another team member while building a second team
+            from the ground up. Together with both teams, we evolved our
+            technology and brought sophisticated features to our platform while
+            maintaining strong focus on code quality and service reliability.
           </p>
         ),
         hightlights: [
@@ -232,12 +229,11 @@ const experience: TimelineEntryProps[] = [
         start: new Date("2022-07-15T12:00:00.000Z"),
         what: (
           <p className="text-justify">
-            Not much later on, I assumed the role of Tech Lead. My main focus
-            was to lead the development of the back-end services and help the
-            team build a scalable and reliable platform. I was also responsible
-            for the architecture and the design of the back-end services and I
-            was working closely with the product team to understand the business
-            requirements and translate them into technical requirements.
+            Promoted to Tech Lead, leading backend service development and
+            helping the team build a scalable and reliable platform. Responsible
+            for architecture and design of backend services, working closely
+            with the product team to understand business requirements and
+            translate them into technical specifications.
           </p>
         ),
         hightlights: [
@@ -279,11 +275,11 @@ const experience: TimelineEntryProps[] = [
         start: new Date("2022-01-15T12:00:00.000Z"),
         what: (
           <p className="text-justify">
-            In 2022, I joined Kariera Group as a Senior Backend Engineer. From
-            the beginning my role was to contribute on the most challenging and
-            not so clearly defined parts of the product development. I took as
-            many features as possible in my own hands and lead them to
-            completion in the most rapid and efficient way.
+            Joined Kariera Group as Senior Backend Engineer, contributing to the
+            most challenging and undefined parts of product development. Took
+            ownership of multiple features and led them to completion rapidly
+            and efficiently, focusing on mission-critical functionality and
+            third-party integrations.
           </p>
         ),
         hightlights: [
@@ -429,11 +425,11 @@ const experience: TimelineEntryProps[] = [
         what: (
           <>
             <p className="text-justify">
-              In 2021, I became Centaur's Director of Engineering, leading the
-              R&D department and orchestrating the Product Development process
-              and team workflow. I scaled the department by adding team members
-              and worked closely with team leads to identify and resolve
-              personal and team challenges quickly.
+              Promoted to Director of Engineering, leading the R&D department
+              and orchestrating the Product Development process and team
+              workflow. Scaled the department by adding team members and worked
+              closely with team leads to identify and resolve personal and team
+              challenges quickly.
             </p>
             <br />
             <p className="text-justify">
@@ -489,12 +485,11 @@ const experience: TimelineEntryProps[] = [
         what: (
           <>
             <p className="text-justify">
-              In 2018, I became a senior software engineer and leader of
-              Centaur's embedded team, while supporting the web team during
-              critical deadlines. This enabled me to create truly end-to-end
-              solutions, ranging from embedded devices to client applications,
-              and manage the backlog, coordinate the team, and interview/train
-              new members.
+              Promoted to senior software engineer and leader of Centaur's
+              embedded team, while supporting the web team during critical
+              deadlines. This enabled me to create truly end-to-end solutions,
+              ranging from embedded devices to client applications, and manage
+              the backlog, coordinate the team, and interview/train new members.
             </p>
             <br />
             <p className="text-justify">
@@ -581,19 +576,18 @@ const experience: TimelineEntryProps[] = [
         what: (
           <>
             <p className="text-justify">
-              In 2016 I joined the web app team, as a full-stack developer, to
-              work with Centaur’s cloud services. My responsibilities included
-              both back-end and front-end development, but I focused more on the
-              back-end working with its architecture and migrating from monolith
-              to microservices to build a more scalable cloud infrastructure.
+              Joined the web app team as a full-stack developer, working with
+              Centaur's cloud services. Responsibilities included both backend
+              and frontend development, with focus on backend architecture and
+              migrating from monolith to microservices for scalable cloud
+              infrastructure.
             </p>
             <br />
             <p className="text-justify">
-              After my first year at Centaur, I started working with IoT devices
-              to support the embedded team. I initially participated as a
-              secondary developer for the software of the IP-enabled devices but
-              I quickly took the lead of all the software and firmware layers
-              for such devices.
+              After the first year, expanded into IoT device development to
+              support the embedded team. Initially participated as a secondary
+              developer for IP-enabled devices but quickly took leadership of
+              all software and firmware layers for such devices.
             </p>
           </>
         ),
@@ -642,11 +636,11 @@ const experience: TimelineEntryProps[] = [
         start: new Date("2016-07-01T12:00:00.000Z"),
         what: (
           <p className="text-justify">
-            I began my career as an intern at Centaur, collaborating with the
-            web application team on front-end and back-end tasks. My
-            responsibilities included maintaining and enhancing the testability
-            of the existing codebase, with a focus on improving stability and
-            performance across various lower-priority projects.
+            Started my career as an intern at Centaur, collaborating with the
+            web application team on frontend and backend tasks. Focused on
+            maintaining and enhancing the testability of the existing codebase,
+            improving stability and performance across various lower-priority
+            projects.
           </p>
         ),
       },
