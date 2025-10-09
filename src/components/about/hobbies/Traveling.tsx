@@ -12,6 +12,7 @@ import BG from "../../../images/countries/bg.inline.svg";
 import CH from "../../../images/countries/ch.inline.svg";
 import DE from "../../../images/countries/de.inline.svg";
 import FI from "../../../images/countries/fi.inline.svg";
+import FR from "../../../images/countries/fr.inline.svg";
 import GB from "../../../images/countries/gb.inline.svg";
 import GR from "../../../images/countries/gr.inline.svg";
 import HU from "../../../images/countries/hu.inline.svg";
@@ -23,6 +24,7 @@ import PL from "../../../images/countries/pl.inline.svg";
 import RO from "../../../images/countries/ro.inline.svg";
 import SE from "../../../images/countries/se.inline.svg";
 import SK from "../../../images/countries/sk.inline.svg";
+import TR from "../../../images/countries/tr.inline.svg";
 import US from "../../../images/countries/us.inline.svg";
 
 const countries = [
@@ -97,6 +99,14 @@ const countries = [
   {
     name: "UK",
     Flag: GB,
+  },
+  {
+    name: "Turkey",
+    Flag: TR,
+  },
+  {
+    name: "France",
+    Flag: FR,
   },
 ];
 
