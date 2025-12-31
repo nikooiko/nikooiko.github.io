@@ -70,7 +70,7 @@ export const PersonalDetailsSection: React.FC = () => {
               href="https://www.linkedin.com/in/nikos-oikonomou/"
               target="_blank"
             >
-              GET IN TOUCH
+              Get in touch
             </a>
           </Button>
           <Button asChild variant="outline">
