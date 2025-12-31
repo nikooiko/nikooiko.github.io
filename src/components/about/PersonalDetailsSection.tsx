@@ -1,6 +1,6 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin } from "lucide-react";
+import { Download, Github, Linkedin } from "lucide-react";
 import * as React from "react";
 import Me from "../../images/me.jpeg";
 
@@ -64,14 +64,22 @@ export const PersonalDetailsSection: React.FC = () => {
           leading engineering teams at Kariera Group, I focus on delivering
           high-impact solutions that scale from startup to enterprise.
         </p>
-        <Button asChild className="mt-2">
-          <a
-            href="https://www.linkedin.com/in/nikos-oikonomou/"
-            target="_blank"
-          >
-            GET IN TOUCH
-          </a>
-        </Button>
+        <div className="flex flex-col sm:flex-row gap-2 mt-2">
+          <Button asChild>
+            <a
+              href="https://www.linkedin.com/in/nikos-oikonomou/"
+              target="_blank"
+            >
+              GET IN TOUCH
+            </a>
+          </Button>
+          <Button asChild variant="outline">
+            <a href="/CV.pdf" download>
+              <Download className="w-4 h-4 mr-2" />
+              Download CV
+            </a>
+          </Button>
+        </div>
       </div>
     </section>
   );
