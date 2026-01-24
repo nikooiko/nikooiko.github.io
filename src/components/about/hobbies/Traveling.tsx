@@ -20,6 +20,7 @@ import IT from "../../../images/countries/it.inline.svg";
 import MK from "../../../images/countries/mk.inline.svg";
 import MT from "../../../images/countries/mt.inline.svg";
 import NL from "../../../images/countries/nl.inline.svg";
+import NO from "../../../images/countries/no.inline.svg";
 import PL from "../../../images/countries/pl.inline.svg";
 import RO from "../../../images/countries/ro.inline.svg";
 import SE from "../../../images/countries/se.inline.svg";
@@ -107,6 +108,10 @@ const countries = [
   {
     name: "France",
     Flag: FR,
+  },
+  {
+    name: "Norway",
+    Flag: NO,
   },
 ];
 
