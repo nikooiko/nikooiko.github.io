@@ -31,6 +31,7 @@ const education: TimelineEntryProps[] = [
               href="https://www.e-ce.uth.gr/"
               className="hover:underline"
               target="_blank"
+              rel="noopener noreferrer"
             >
               Electrical and Computer Engineering.
             </a>

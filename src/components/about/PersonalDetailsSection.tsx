@@ -16,14 +16,16 @@ export const PersonalDetailsSection: React.FC = () => {
           <a
             href="https://github.com/nikooiko"
             target="_blank"
-            arial-label="Navigate to github page"
+            rel="noopener noreferrer"
+            aria-label="Navigate to github page"
           >
             <Github size="32" aria-label="github icon" />
           </a>
           <a
             href="https://nikooiko.medium.com"
             target="_blank"
-            arial-label="Navigate to medium.com page"
+            rel="noopener noreferrer"
+            aria-label="Navigate to medium.com page"
             className="w-8 h-8 dark:text-white"
           >
             <svg
@@ -45,7 +47,8 @@ export const PersonalDetailsSection: React.FC = () => {
           <a
             href="https://www.linkedin.com/in/nikos-oikonomou/"
             target="_blank"
-            arial-label="Navigate to linkedin page"
+            rel="noopener noreferrer"
+            aria-label="Navigate to linkedin page"
           >
             <Linkedin size="32" aria-label="linkedin icon" />
           </a>
@@ -69,6 +72,7 @@ export const PersonalDetailsSection: React.FC = () => {
             <a
               href="https://www.linkedin.com/in/nikos-oikonomou/"
               target="_blank"
+              rel="noopener noreferrer"
             >
               Get in touch
             </a>

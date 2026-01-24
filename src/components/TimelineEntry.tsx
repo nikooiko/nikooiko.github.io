@@ -62,7 +62,12 @@ export const TimelineEntry: React.FC<TimelineEntryProps> = ({
       </time>
       <h3 className="text-lg font-semibold text-stone-900 dark:text-stone-100">
         {as} @{" "}
-        <a href={link} className="hover:underline" target="_blank">
+        <a
+          href={link}
+          className="hover:underline"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           {at}
         </a>
       </h3>
@@ -78,7 +83,12 @@ export const TimelineEntry: React.FC<TimelineEntryProps> = ({
             <TooltipProvider key={name}>
               <Tooltip>
                 <TooltipTrigger asChild>
-                  <a href={link} target="_blank" aria-label="Show technology">
+                  <a
+                    href={link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Show technology"
+                  >
                     {icon}
                   </a>
                 </TooltipTrigger>

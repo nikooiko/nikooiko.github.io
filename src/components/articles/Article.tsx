@@ -20,7 +20,7 @@ const ArticleCategories: React.FC<{ article: ArticleType }> = ({ article }) => {
           onClick={(e) => {
             e.preventDefault();
             e.stopPropagation();
-            window.open(category.link, "_blank");
+            window.open(category.link, "_blank", "noopener,noreferrer");
           }}
         >
           {category.name}
@@ -36,7 +36,12 @@ const ArticleCard: React.FC<{ article: ArticleType }> = ({ article }) => {
       className="group rounded-lg bg-card shadow-sm dark:shadow-lg transition-all hover:shadow-2xl"
       id={article.id}
     >
-      <a href={article.link} className="block" target="_blank">
+      <a
+        href={article.link}
+        className="block"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <div className="h-48 md:h-60 overflow-hidden rounded-t-lg">
           {article.image ? (
             <GatsbyImage

@@ -20,7 +20,7 @@ export const FeaturedArticle: React.FC<{ article: Article }> = ({
             dangerouslySetInnerHTML={{ __html: article.shortHTML }}
           />
           <Button size="lg" asChild>
-            <a href={article.link} target="_blank">
+            <a href={article.link} target="_blank" rel="noopener noreferrer">
               Read full article
               <ChevronRight className="w-5 h-5 ml-2" />
             </a>
