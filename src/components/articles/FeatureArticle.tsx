@@ -9,14 +9,14 @@ export const FeaturedArticle: React.FC<{ article: Article }> = ({
 }) => {
   // TODO: maybe add image placeholder?
   return (
-    <section className="sm:mb-8 container px-4 hidden md:block">
-      <article className="my-4 sm:m-8 grid grid-cols-1 lg:grid-cols-2 gap-2 sm:gap-8 items-center">
+    <section className="sm:mb-4 container px-4 hidden md:block">
+      <article className="my-4 sm:my-6 sm:mx-8 grid grid-cols-1 lg:grid-cols-2 gap-2 sm:gap-8 items-center">
         <div>
           <h2 className="text-2xl sm:text-4xl font-bold mb-2 sm:mb-4">
             {article.title}
           </h2>
           <p
-            className="text-xl text-gray-600 dark:text-gray-300 mb-4 text-justify"
+            className="text-xl text-gray-600 dark:text-gray-300 mb-4"
             dangerouslySetInnerHTML={{ __html: article.shortHTML }}
           />
           <Button size="lg" asChild>

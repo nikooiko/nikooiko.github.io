@@ -122,7 +122,7 @@ const experience: TimelineEntryProps[] = [
         as: "VP of Engineering",
         start: new Date("2025-01-01T12:00:00.000Z"),
         what: (
-          <p className="text-justify">
+          <p>
             Promoted to VP of Engineering to lead the company's growing
             technical organization. My focus shifted from deep technical
             involvement to high-level engineering management, team scalability,
@@ -194,7 +194,7 @@ const experience: TimelineEntryProps[] = [
         start: new Date("2023-11-01T12:00:00.000Z"),
         end: new Date("2025-01-01T12:00:00.000Z"),
         what: (
-          <p className="text-justify">
+          <p>
             Transitioned into a less team-oriented role, handing over the Tech
             Lead position to another team member while building a second team
             from the ground up. Together with both teams, we evolved our
@@ -250,7 +250,7 @@ const experience: TimelineEntryProps[] = [
         end: new Date("2023-11-01T12:00:00.000Z"),
         start: new Date("2022-07-15T12:00:00.000Z"),
         what: (
-          <p className="text-justify">
+          <p>
             Promoted to Tech Lead, leading backend service development and
             helping the team build a scalable and reliable platform. Responsible
             for architecture and design of backend services, working closely
@@ -296,7 +296,7 @@ const experience: TimelineEntryProps[] = [
         end: new Date("2022-07-15T12:00:00.000Z"),
         start: new Date("2022-01-15T12:00:00.000Z"),
         what: (
-          <p className="text-justify">
+          <p>
             Joined Kariera Group as Senior Backend Engineer, contributing to the
             most challenging and undefined parts of product development. Took
             ownership of multiple features and led them to completion rapidly
@@ -446,7 +446,7 @@ const experience: TimelineEntryProps[] = [
         start: new Date("2021-03-01T12:00:00.000Z"),
         what: (
           <>
-            <p className="text-justify">
+            <p>
               Promoted to Director of Engineering, leading the R&D department
               and orchestrating the Product Development process and team
               workflow. Scaled the department by adding team members and worked
@@ -454,7 +454,7 @@ const experience: TimelineEntryProps[] = [
               challenges quickly.
             </p>
             <br />
-            <p className="text-justify">
+            <p>
               Leveraging my experience with Centaur's cloud infrastructure, I
               collaborated with the DevOps team to identify and resolve cluster
               and deployment issues. I upgraded our technology stack to modern
@@ -506,7 +506,7 @@ const experience: TimelineEntryProps[] = [
         start: new Date("2018-09-01T12:00:00.000Z"),
         what: (
           <>
-            <p className="text-justify">
+            <p>
               Promoted to senior software engineer and leader of Centaur's
               embedded team, while supporting the web team during critical
               deadlines. This enabled me to create truly end-to-end solutions,
@@ -514,7 +514,7 @@ const experience: TimelineEntryProps[] = [
               the backlog, coordinate the team, and interview/train new members.
             </p>
             <br />
-            <p className="text-justify">
+            <p>
               I also supported field engineers and directly communicated with
               clients to resolve issues, ensuring comprehensive problem-solving
               across all aspects of the product lifecycle.
@@ -597,7 +597,7 @@ const experience: TimelineEntryProps[] = [
         start: new Date("2016-09-01T12:00:00.000Z"),
         what: (
           <>
-            <p className="text-justify">
+            <p>
               Joined the web app team as a full-stack developer, working with
               Centaur's cloud services. Responsibilities included both backend
               and frontend development, with focus on backend architecture and
@@ -605,7 +605,7 @@ const experience: TimelineEntryProps[] = [
               infrastructure.
             </p>
             <br />
-            <p className="text-justify">
+            <p>
               After the first year, expanded into IoT device development to
               support the embedded team. Initially participated as a secondary
               developer for IP-enabled devices but quickly took leadership of
@@ -657,7 +657,7 @@ const experience: TimelineEntryProps[] = [
         end: new Date("2016-09-01T12:00:00.000Z"),
         start: new Date("2016-07-01T12:00:00.000Z"),
         what: (
-          <p className="text-justify">
+          <p>
             Started my career as an intern at Centaur, collaborating with the
             web application team on frontend and backend tasks. Focused on
             maintaining and enhancing the testability of the existing codebase,
@@ -682,7 +682,7 @@ export const ExperienceSection: React.FC = () => {
           .map((e) => ({ ...e, history: e.history.slice().reverse() }));
   }, [experienceOrder]);
   return (
-    <section className="px-4 mt-4 max-w-xl">
+    <section className="px-4 mt-4 max-w-2xl">
       <div className="flex flex-row justify-between items-center">
         <h2 className="text-2xl font-bold py-2">Work Experience</h2>
         <OrderByButton

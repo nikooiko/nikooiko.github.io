@@ -35,7 +35,7 @@ const education: TimelineEntryProps[] = [
             >
               Electrical and Computer Engineering.
             </a>
-            <p className="mt-4 text-justify">
+            <p className="mt-4">
               My academic journey focused on <b>low-level programming</b> and{" "}
               <b>distributed systems</b>, starting with system-level programming
               (POSIX) and computer architecture. I specialized in
@@ -53,7 +53,7 @@ const education: TimelineEntryProps[] = [
 
 export const EducationSection: React.FC = () => {
   return (
-    <section className="px-4 py-2 max-w-xl">
+    <section className="px-4 py-2 max-w-2xl">
       <h2 className="text-2xl font-bold py-2">Education</h2>
       <ol className="relative border-s border-stone-200 dark:border-stone-700 ml-4 pr-4 sm:pr-0">
         {education.map((e, i) => (

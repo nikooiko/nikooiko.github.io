@@ -6,7 +6,7 @@ import Me from "../../images/me.jpeg";
 
 export const PersonalDetailsSection: React.FC = () => {
   return (
-    <section className="p-4 flex flex-col sm:flex-row justify-start sm:justify-center items-center gap-4 sm:gap-8 max-w-xl">
+    <section className="p-4 flex flex-col sm:flex-row justify-start sm:justify-center items-center gap-4 sm:gap-8 max-w-2xl">
       <div className="flex flex-col justify-center w-fit h-fit">
         <Avatar className="h-36 w-36">
           <AvatarImage src={Me} alt="Me" />
@@ -58,7 +58,7 @@ export const PersonalDetailsSection: React.FC = () => {
         <h1 className="text-xl">
           Hello I'm <b>Nikos Oikonomou</b>!
         </h1>
-        <p className="text-justify">
+        <p>
           I'm a <b>Software Engineer</b> with over a decade of experience
           building scalable software solutions. I specialize in{" "}
           <b>backend development</b> and <b>distributed systems</b>, with a
@@ -74,7 +74,8 @@ export const PersonalDetailsSection: React.FC = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Get in touch
+              <Linkedin className="w-4 h-4 mr-2" />
+              Connect on LinkedIn
             </a>
           </Button>
           <Button asChild variant="outline">
