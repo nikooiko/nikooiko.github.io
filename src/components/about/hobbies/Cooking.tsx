@@ -10,7 +10,7 @@ export const Cooking: React.FC = () => {
       </div>
       <p className="text-sm text-muted-foreground mt-1 px-1">
         As a Greek, I'm well-versed in Mediterranean cuisine, but my true
-        passion lies in Italian cooking—especially crafting traditional dishes
+        passion lies in Italian cooking, especially crafting traditional dishes
         from scratch.
       </p>
     </div>
