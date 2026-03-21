@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Skill(update-config)",
+      "Read(*)",
+      "Edit(*)",
+      "Bash(grep:*)",
+      "Bash(rg:*)",
+      "Bash(find:*)",
+      "Bash(ls:*)",
+      "Bash(git log:*)",
+      "Bash(git status:*)",
+      "Bash(git diff:*)",
+      "Bash(git blame:*)",
+      "Bash(git show:*)",
+      "Bash(wc:*)",
+      "Bash(jq:*)"
+    ]
+  }
+}
