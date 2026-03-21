@@ -6,7 +6,7 @@ import {
 } from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
 import { format, formatDuration, intervalToDuration } from "date-fns";
-import { BriefcaseIcon, CalendarIcon, SparkleIcon } from "lucide-react";
+import { BriefcaseIcon, CalendarIcon, ChevronDownIcon, ChevronUpIcon, SparkleIcon } from "lucide-react";
 import * as React from "react";
 
 export type TimelineEntryProps = {
@@ -38,6 +38,7 @@ export const TimelineEntry: React.FC<TimelineEntryProps> = ({
 }) => {
   const { start, end, as, what, hightlights } = history[0];
   const rest = history.slice(1);
+  const [expanded, setExpanded] = React.useState(true);
   return (
     <li className="mb-4 ms-8">
       <span
@@ -55,9 +56,7 @@ export const TimelineEntry: React.FC<TimelineEntryProps> = ({
         {!skipDuration &&
           ` (${formatDuration(
             intervalToDuration({ start: start, end: end ?? new Date() }),
-            {
-              format: ["months", "years"],
-            }
+            { format: ["years", "months"] }
           )})`}
       </time>
       <h3 className="text-lg font-semibold text-stone-900 dark:text-stone-100">
@@ -72,7 +71,7 @@ export const TimelineEntry: React.FC<TimelineEntryProps> = ({
         </a>
       </h3>
       {industry && (
-        <h4 className="text-sm font-light leading-tight text-justify text-stone-900 dark:text-stone-200 flex items-center">
+        <h4 className="text-sm font-light leading-tight text-stone-900 dark:text-stone-200 flex items-center">
           <BriefcaseIcon className="mr-2 h-4 w-4" />
           {industry}
         </h4>
@@ -119,45 +118,62 @@ export const TimelineEntry: React.FC<TimelineEntryProps> = ({
           </ul>
         </>
       )}
-      {rest.map((h) => (
-        <React.Fragment key={h.start.toISOString()}>
-          <div className="h-4" />
-          <div className="absolute w-3 h-3 bg-stone-200 rounded-full mt-8 -start-1.5 border border-white dark:border-stone-900 dark:bg-stone-700" />
-          <time className="mb-1 text-sm font-normal leading-none text-stone-500 dark:text-stone-300">
-            {format(h.start, "MMM. yyyy")} -{" "}
-            {h.end ? format(h.end, "MMM. yyyy") : "Present"} (
-            {formatDuration(
-              intervalToDuration({
-                start: h.start,
-                end: h.end ?? new Date(),
-              }),
-              {
-                format: ["years", "months"],
-              }
-            )}
-            )
-          </time>
-          <h3 className="text-lg font-semibold text-stone-900 dark:text-stone-100">
-            {h.as}
-          </h3>
-          <div className=" text-base font-normal text-stone-600 dark:text-stone-300">
-            {h.what}
-          </div>
-          {h.hightlights?.length && (
+      {rest.length > 0 && (
+        <button
+          onClick={() => setExpanded((v) => !v)}
+          className="mt-3 flex items-center gap-1 text-sm text-stone-500 dark:text-stone-400 hover:text-stone-800 dark:hover:text-stone-100 transition-colors"
+        >
+          {expanded ? (
             <>
-              <h4 className="font-semibold mt-4 italic">Key Highlights</h4>
-              <ul className="mt-2 list-disc list-inside text-sm italic">
-                {h.hightlights.map((highlight, hIndex) => (
-                  <li key={hIndex} className="flex items-start">
-                    <SparkleIcon className="mr-2 h-4 w-4 mt-1 flex-shrink-0" />
-                    <span>{highlight}</span>
-                  </li>
-                ))}
-              </ul>
+              <ChevronUpIcon className="h-4 w-4" />
+              Hide {rest.length} earlier {rest.length === 1 ? "role" : "roles"}
+            </>
+          ) : (
+            <>
+              <ChevronDownIcon className="h-4 w-4" />
+              Show {rest.length} earlier {rest.length === 1 ? "role" : "roles"}
             </>
           )}
-        </React.Fragment>
-      ))}
+        </button>
+      )}
+      {expanded &&
+        rest.map((h) => (
+          <React.Fragment key={h.start.toISOString()}>
+            <div className="h-4" />
+            <div className="absolute w-3 h-3 bg-stone-200 rounded-full mt-8 -start-1.5 border border-white dark:border-stone-900 dark:bg-stone-700" />
+            <time className="mb-1 text-sm font-normal leading-none text-stone-500 dark:text-stone-300">
+              {format(h.start, "MMM. yyyy")} -{" "}
+              {h.end ? format(h.end, "MMM. yyyy") : "Present"} (
+              {formatDuration(
+                intervalToDuration({
+                  start: h.start,
+                  end: h.end ?? new Date(),
+                }),
+                { format: ["years", "months"] }
+              )}
+              )
+            </time>
+            <h3 className="text-lg font-semibold text-stone-900 dark:text-stone-100">
+              {h.as}
+            </h3>
+            <div className="text-base font-normal text-stone-600 dark:text-stone-300">
+              {h.what}
+            </div>
+            {h.hightlights?.length && (
+              <>
+                <h4 className="font-semibold mt-4 italic">Key Highlights</h4>
+                <ul className="mt-2 list-disc list-inside text-sm italic">
+                  {h.hightlights.map((highlight, hIndex) => (
+                    <li key={hIndex} className="flex items-start">
+                      <SparkleIcon className="mr-2 h-4 w-4 mt-1 flex-shrink-0" />
+                      <span>{highlight}</span>
+                    </li>
+                  ))}
+                </ul>
+              </>
+            )}
+          </React.Fragment>
+        ))}
     </li>
   );
 };
