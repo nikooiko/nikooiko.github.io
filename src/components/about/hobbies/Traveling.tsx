@@ -1,18 +1,6 @@
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@radix-ui/react-tooltip";
 import { Luggage } from "lucide-react";
 import React from "react";
 import { ComposableMap, Geographies, Geography } from "react-simple-maps";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogTitle,
-} from "@/components/ui/dialog";
 import { cn } from "@/lib/utils";
 import AT from "../../../images/countries/at.inline.svg";
 import BE from "../../../images/countries/be.inline.svg";
@@ -86,20 +74,15 @@ const countries = [
 ];
 
 type WorldMapProps = {
-  interactive?: boolean;
   selected?: string | null;
   onSelect?: (id: string | null) => void;
 };
 
-const WorldMap: React.FC<WorldMapProps> = ({
-  interactive = false,
-  selected = null,
-  onSelect,
-}) => {
+const WorldMap: React.FC<WorldMapProps> = ({ selected = null, onSelect }) => {
   const [hovered, setHovered] = React.useState<string | null>(null);
 
   return (
-    <div className="relative w-full h-full">
+    <div className="relative w-full">
       <ComposableMap
         projectionConfig={{ rotate: [-10, 0, 0], scale: 147 }}
         width={800}
@@ -128,21 +111,16 @@ const WorldMap: React.FC<WorldMapProps> = ({
                   stroke="hsl(var(--background))"
                   strokeWidth={0.5}
                   onClick={
-                    interactive && isVisited
+                    isVisited
                       ? () => onSelect?.(isSelected ? null : id)
                       : undefined
                   }
-                  onMouseEnter={
-                    interactive ? () => setHovered(id) : undefined
-                  }
-                  onMouseLeave={
-                    interactive ? () => setHovered(null) : undefined
-                  }
+                  onMouseEnter={() => setHovered(id)}
+                  onMouseLeave={() => setHovered(null)}
                   style={{
                     default: {
                       outline: "none",
-                      cursor:
-                        interactive && isVisited ? "pointer" : "default",
+                      cursor: isVisited ? "pointer" : "default",
                     },
                     hover: { outline: "none" },
                     pressed: { outline: "none" },
@@ -158,101 +136,47 @@ const WorldMap: React.FC<WorldMapProps> = ({
 };
 
 export const Traveling: React.FC = () => {
-  const [open, setOpen] = React.useState(false);
   const [selected, setSelected] = React.useState<string | null>(null);
 
   const toggle = (id: string) =>
     setSelected((prev) => (prev === id ? null : id));
 
   return (
-    <>
-      <div
-        className="flex flex-col rounded-lg shadow dark:shadow-lg bg-card p-2 cursor-pointer hover:ring-1 hover:ring-ring transition-shadow"
-        onClick={() => setOpen(true)}
-        role="button"
-        tabIndex={0}
-        onKeyDown={(e) => e.key === "Enter" && setOpen(true)}
-        aria-label="Open traveling map"
-      >
-        <div className="flex flex-row gap-1 items-center">
-          <Luggage className="w-8" />
-          <h3 className="text-xl pr-1">
-            Traveling ({countries.length} of 195)
-          </h3>
-        </div>
-        <p className="text-sm text-muted-foreground mt-1 px-1">
-          Exploring diverse cultures and landscapes across Europe and North
-          America.
-        </p>
-        <WorldMap />
-        <div className="flex flex-wrap gap-1 mt-1 px-1">
-          {countries.map(({ name, id, Flag }) => (
-            <TooltipProvider key={name}>
-              <Tooltip>
-                <TooltipTrigger
-                  aria-label={name}
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    setSelected(id);
-                    setOpen(true);
-                  }}
-                >
-                  <Flag className="h-6" />
-                </TooltipTrigger>
-                <TooltipContent
-                  side="bottom"
-                  className="py-0 px-2 bg-background dark:bg-stone-800 rounded"
-                >
-                  {name}
-                </TooltipContent>
-              </Tooltip>
-            </TooltipProvider>
-          ))}
-        </div>
+    <div className="flex flex-col rounded-lg shadow dark:shadow-lg bg-card p-2">
+      <div className="flex flex-row gap-1 items-center">
+        <Luggage className="w-8" />
+        <h3 className="text-xl pr-1">Traveling ({countries.length} of 195)</h3>
       </div>
-
-      <Dialog open={open} onOpenChange={setOpen}>
-        <DialogContent className="!flex !flex-col w-screen h-screen max-w-none !rounded-none p-6 gap-3">
-          <DialogTitle className="flex items-center gap-2 text-2xl font-bold shrink-0">
-            <Luggage className="w-7 h-7" />
-            Traveling ({countries.length} of 195)
-          </DialogTitle>
-          <DialogDescription className="sr-only">
-            Interactive world map. Click a country or flag to highlight it.
-          </DialogDescription>
-          <div className="flex-1 min-h-0">
-            <WorldMap interactive selected={selected} onSelect={setSelected} />
-          </div>
-          <div className="shrink-0 flex flex-col gap-2">
-            <div className="h-6 flex items-center justify-center">
-              {selected && (
-                <span className="px-2 py-0.5 rounded text-sm font-medium bg-stone-100 dark:bg-stone-800 border border-stone-200 dark:border-stone-700">
-                  {VISITED[selected]}
-                </span>
+      <p className="text-sm text-muted-foreground mt-1 px-1">
+        Exploring diverse cultures and landscapes across Europe and North
+        America.
+      </p>
+      <WorldMap selected={selected} onSelect={setSelected} />
+      <div className="flex flex-wrap gap-1 mt-1 px-1">
+        {countries.map(({ name, id, Flag }) => (
+          <div key={name} className="relative">
+            <button
+              aria-label={name}
+              onClick={() => toggle(id)}
+              className={cn(
+                "rounded transition-all",
+                selected === id
+                  ? "ring-2 ring-primary ring-offset-1 ring-offset-background"
+                  : selected !== null
+                  ? "opacity-40 hover:opacity-100"
+                  : "hover:opacity-80"
               )}
-            </div>
-            <div className="flex flex-wrap gap-1.5">
-              {countries.map(({ name, id, Flag }) => (
-                <button
-                  key={name}
-                  aria-label={name}
-                  onClick={() => toggle(id)}
-                  className={cn(
-                    "rounded transition-all",
-                    selected === id
-                      ? "ring-2 ring-primary ring-offset-1 ring-offset-background"
-                      : selected !== null
-                      ? "opacity-40 hover:opacity-100"
-                      : "hover:opacity-80"
-                  )}
-                >
-                  <Flag className="h-7 block" />
-                </button>
-              ))}
-            </div>
+            >
+              <Flag className="h-6 block" />
+            </button>
+            {selected === id && (
+              <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-1.5 px-2 py-0.5 rounded text-xs font-medium bg-popover text-popover-foreground border shadow-sm whitespace-nowrap pointer-events-none">
+                {name}
+              </div>
+            )}
           </div>
-        </DialogContent>
-      </Dialog>
-    </>
+        ))}
+      </div>
+    </div>
   );
 };
