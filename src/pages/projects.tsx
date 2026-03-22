@@ -43,8 +43,7 @@ const ProjectsPage: React.FC<PageProps> = ({ location }) => {
   return (
     <Layout activePath={location.pathname}>
       <section className="px-4 mt-4 max-w-2xl w-full">
-        <h2 className="text-2xl font-bold py-2">Projects</h2>
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 mt-2">
           {projects.map((project) => (
             <ProjectCard key={project.name} {...project} />
           ))}
