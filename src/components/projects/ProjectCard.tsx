@@ -1,4 +1,4 @@
-import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
 import * as React from "react";
 
@@ -7,7 +7,8 @@ export type ProjectCardProps = {
   tagline: string;
   url: string;
   description: React.ReactNode;
-  techStack: string[];
+  highlights: string[];
+  logo: string;
 };
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -15,31 +16,36 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   tagline,
   url,
   description,
-  techStack,
+  highlights,
+  logo,
 }) => {
   return (
-    <div className="border border-stone-200 dark:border-stone-700 rounded-lg p-4 flex flex-col gap-3 min-h-48">
-      <div>
-        <a
-          href={url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-1.5 group"
-        >
-          <h3 className="text-lg font-bold group-hover:text-primary transition-colors">
-            {name}
-          </h3>
-          <ExternalLink className="w-3.5 h-3.5 text-muted-foreground group-hover:text-primary transition-colors" />
-        </a>
-        <p className="text-sm text-muted-foreground">{tagline}</p>
+    <div className="border border-stone-200 dark:border-stone-700 rounded-xl p-6 flex flex-col gap-4 bg-background shadow-sm hover:shadow-md transition-shadow duration-200">
+      <div className="flex items-start gap-4">
+        <div className="flex-shrink-0 w-12 h-12 rounded-xl overflow-hidden">
+          <img src={logo} alt={`${name} logo`} className="w-full h-full object-cover" />
+        </div>
+        <div>
+          <h3 className="text-lg font-bold">{name}</h3>
+          <p className="text-sm text-primary">{tagline}</p>
+        </div>
       </div>
-      <p className="text-sm">{description}</p>
-      <div className="flex flex-wrap gap-1.5">
-        {techStack.map((tech) => (
-          <Badge key={tech} variant="outline">
-            {tech}
-          </Badge>
+      <p className="text-sm text-muted-foreground leading-relaxed">{description}</p>
+      <ul className="flex flex-col gap-1.5">
+        {highlights.map((item) => (
+          <li key={item} className="flex items-start gap-2 text-sm">
+            <span className="text-primary mt-0.5 flex-shrink-0">✦</span>
+            <span>{item}</span>
+          </li>
         ))}
+      </ul>
+      <div>
+        <Button variant="outline" size="sm" asChild>
+          <a href={url} target="_blank">
+            Visit {name}
+            <ExternalLink className="w-3.5 h-3.5 ml-1" />
+          </a>
+        </Button>
       </div>
     </div>
   );

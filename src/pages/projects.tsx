@@ -5,37 +5,34 @@ import {
 } from "@/components/projects/ProjectCard";
 import { type PageProps } from "gatsby";
 import * as React from "react";
+import brandoorLogo from "../images/projects/brandoor.svg";
+import mnemiLogo from "../images/projects/mnemi.png";
 
 const projects: ProjectCardProps[] = [
   {
-    name: "brandoor.io",
-    tagline: "Curated Remote Job Board",
+    name: "Brandoor",
+    tagline: "Remote jobs at companies that matter.",
     url: "https://brandoor.io",
     description:
-      "A curated remote job board focused on quality over quantity. Job seekers can search, filter, and bookmark remote jobs from vetted companies, with full-text search, multi-dimension filters, URL-shareable state, and saved searches with email alerts. Companies are community-rated via upvotes/downvotes, and users can follow them to get notified when new roles appear. Automated crawlers keep listings fresh, and an AI pipeline continuously discovers and enriches new companies.",
-    techStack: [
-      "Next.js 15",
-      "TypeScript",
-      "Tailwind CSS",
-      "Supabase",
-      "Stripe",
-      "Gemini",
+      "A curated collection of remote opportunities at recognizable, respected companies that strengthen your career credibility. No ads, no paid placements, just honest job discovery.",
+    highlights: [
+      "Curated, vetted companies for reputation and remote culture",
+      "Independent & ad-free platform",
     ],
+    logo: brandoorLogo,
   },
   {
-    name: "mnemi.app",
-    tagline: "AI Memory Companion",
+    name: "Mnemi",
+    tagline: "Your private AI memory companion.",
     url: "https://mnemi.app",
     description:
-      "A private journaling app that uses AI to help you capture moments, track commitments, and revisit your past. Write or speak freely (voice recording included), and the app organizes what matters: each entry is analyzed automatically, generating a summary, extracting keywords, and identifying action items with due dates. A built-in chat lets you query your own history conversationally via semantic search.",
-    techStack: [
-      "React",
-      "TypeScript",
-      "Vite",
-      "Supabase",
-      "OpenAI",
-      "Stripe",
+      "Capture moments, revisit memories, find meaning. Write or speak to capture memories, get AI-powered insights, and chat with your past self to discover patterns.",
+    highlights: [
+      "Voice and text memory capture with instant transcription",
+      "AI-powered summaries, keywords, and action items",
+      "Private by design with secure authentication",
     ],
+    logo: mnemiLogo,
   },
 ];
 
@@ -61,7 +58,7 @@ export const Head = () => (
     <title>Projects by Nikos Oikonomou</title>
     <meta
       name="description"
-      content="Side projects built by Nikos Oikonomou, including brandoor.io (curated remote job board) and mnemi.app (AI memory companion)."
+      content="Side projects built by Nikos Oikonomou, including Brandoor (curated remote job board) and Mnemi (AI memory companion)."
     />
   </>
 );

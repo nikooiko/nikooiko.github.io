@@ -4,6 +4,7 @@
       "Skill(update-config)",
       "Read(*)",
       "Edit(*)",
+      "Glob(*)",
       "Bash(grep:*)",
       "Bash(rg:*)",
       "Bash(find:*)",
