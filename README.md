@@ -51,6 +51,16 @@ Articles are automatically fetched from Medium RSS feed using the `fetch:article
 - Extracts images and descriptions
 - Saves to `src/data/articles.json`
 
+### World Map (Traveling card)
+
+The interactive world map in the Traveling hobby card uses `react-simple-maps` to render an SVG map from topojson data. The map data file (`static/countries-110m.json`) comes from the `world-atlas` npm package but is committed directly to `static/` — `world-atlas` itself is not a runtime dependency and should not be added back.
+
+To update the map data:
+```bash
+npx world-atlas # or download manually from https://github.com/topojson/world-atlas
+cp node_modules/world-atlas/countries-110m.json static/countries-110m.json
+```
+
 ### Personal Information
 
 Update personal details, experience, and education in the respective component files:
