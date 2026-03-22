@@ -16,6 +16,10 @@ npm run fetch:articles # Fetch articles from Medium RSS into src/data/articles.j
 
 There is no test suite.
 
+## Writing style rules
+
+- **No em dashes (—)** anywhere on the site. Use a colon, comma, or rewrite the sentence instead.
+
 ## Architecture
 
 **Gatsby 5 static site** — personal portfolio for Nikos Oikonomou. Pages are in `src/pages/`, components in `src/components/`.
