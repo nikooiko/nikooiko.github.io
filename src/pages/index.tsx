@@ -25,7 +25,7 @@ export const Head = () => (
     <title>About Nikos Oikonomou</title>
     <meta
       name="description"
-      content="Personal page of Nikos Oikonomou. Provides information about the experience, education, skills, hobbies, and interests."
+      content="Personal page of Nikos Oikonomou — software engineer, engineering leader, and builder. Specializing in backend systems, distributed platforms, and IoT."
     />
   </>
 );
