@@ -36,13 +36,11 @@ const education: TimelineEntryProps[] = [
               Electrical and Computer Engineering.
             </a>
             <p className="mt-4">
-              My academic journey focused on <b>low-level programming</b> and{" "}
-              <b>distributed systems</b>, starting with system-level programming
-              (POSIX) and computer architecture. I specialized in
-              <b> embedded systems</b> and <b>wireless sensor networks</b>,
-              which led me into the IoT domain and enabled me to build
-              comprehensive end-to-end solutions. This foundation continues to
-              influence my approach to scalable, reliable software architecture.
+              Specialized in <b>embedded systems</b> and{" "}
+              <b>wireless sensor networks</b>, building on a foundation of{" "}
+              <b>low-level programming</b> (POSIX) and{" "}
+              <b>distributed systems</b>. This background shaped my approach to
+              IoT platforms and scalable software architecture.
             </p>
           </>
         ),

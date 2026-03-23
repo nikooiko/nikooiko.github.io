@@ -56,16 +56,14 @@ export const PersonalDetailsSection: React.FC = () => {
       </div>
       <div className="flex flex-col gap-2 h-fit">
         <h1 className="text-xl">
-          Hello I'm <b>Nikos Oikonomou</b>!
+          Hi, I'm <b>Nikos Oikonomou</b>
         </h1>
         <p>
-          I'm a <b>Software Engineer</b> with over a decade of experience
-          building scalable software solutions. I specialize in{" "}
-          <b>backend development</b> and <b>distributed systems</b>, with a
-          passion for
-          <b> IoT platforms</b> and <b>cloud infrastructure</b>. Currently
-          leading engineering teams at Kariera Group, I focus on delivering
-          high-impact solutions that scale from startup to enterprise.
+          <b>Software Engineer</b> with 10+ years building scalable{" "}
+          <b>backend systems</b> and <b>distributed platforms</b>. Passionate
+          about <b>IoT</b> and <b>cloud infrastructure</b>. Currently VP of
+          Engineering at Kariera Group, focused on technical strategy and team
+          excellence.
         </p>
         <div className="flex flex-col sm:flex-row gap-2 mt-2">
           <Button asChild>

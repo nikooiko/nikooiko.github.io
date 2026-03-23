@@ -123,12 +123,10 @@ const experience: TimelineEntryProps[] = [
         start: new Date("2025-01-01T12:00:00.000Z"),
         what: (
           <p>
-            Promoted to VP of Engineering to lead the company's growing
-            technical organization. My focus shifted from deep technical
-            involvement to high-level engineering management, team scalability,
-            and strategic alignment with product and business goals. I now
-            oversee multiple squads, guide the engineering vision, and ensure
-            operational excellence across projects.
+            Led the shift from individual technical contribution to
+            organizational leadership, overseeing multiple squads, driving
+            engineering vision, and aligning technical strategy with product and
+            business goals.
           </p>
         ),
         hightlights: [
@@ -195,11 +193,9 @@ const experience: TimelineEntryProps[] = [
         end: new Date("2025-01-01T12:00:00.000Z"),
         what: (
           <p>
-            Transitioned into a less team-oriented role, handing over the Tech
-            Lead position to another team member while building a second team
-            from the ground up. Together with both teams, we evolved our
-            technology and brought sophisticated features to our platform while
-            maintaining strong focus on code quality and service reliability.
+            Stepped back from direct team leadership to scale the organization,
+            building a second team from the ground up while keeping a cross-team
+            focus on code quality, platform evolution, and service reliability.
           </p>
         ),
         hightlights: [
@@ -251,11 +247,9 @@ const experience: TimelineEntryProps[] = [
         start: new Date("2022-07-15T12:00:00.000Z"),
         what: (
           <p>
-            Promoted to Tech Lead, leading backend service development and
-            helping the team build a scalable and reliable platform. Responsible
-            for architecture and design of backend services, working closely
-            with the product team to understand business requirements and
-            translate them into technical specifications.
+            Led backend service development and architecture, translating
+            business requirements into technical specifications while guiding
+            the team toward a scalable and reliable platform.
           </p>
         ),
         hightlights: [
@@ -297,11 +291,9 @@ const experience: TimelineEntryProps[] = [
         start: new Date("2022-01-15T12:00:00.000Z"),
         what: (
           <p>
-            Joined Kariera Group as Senior Backend Engineer, contributing to the
-            most challenging and undefined parts of product development. Took
-            ownership of multiple features and led them to completion rapidly
-            and efficiently, focusing on mission-critical functionality and
-            third-party integrations.
+            Owned the most challenging and undefined areas of product
+            development, delivering mission-critical features and third-party
+            integrations quickly and efficiently.
           </p>
         ),
         hightlights: [
@@ -445,23 +437,12 @@ const experience: TimelineEntryProps[] = [
         end: new Date("2022-01-15T12:00:00.000Z"),
         start: new Date("2021-03-01T12:00:00.000Z"),
         what: (
-          <>
-            <p>
-              Promoted to Director of Engineering, leading the R&D department
-              and orchestrating the Product Development process and team
-              workflow. Scaled the department by adding team members and worked
-              closely with team leads to identify and resolve personal and team
-              challenges quickly.
-            </p>
-            <br />
-            <p>
-              Leveraging my experience with Centaur's cloud infrastructure, I
-              collaborated with the DevOps team to identify and resolve cluster
-              and deployment issues. I upgraded our technology stack to modern
-              tools and versions, migrating our cluster from self-managed to
-              provider-managed for improved stability and monitoring.
-            </p>
-          </>
+          <p>
+            Led the R&D department, scaling the team and streamlining product
+            development workflows. Collaborated with DevOps to modernize the
+            cloud stack, migrating to a provider-managed Kubernetes cluster for
+            improved stability and observability.
+          </p>
         ),
         hightlights: [
           <span>
@@ -505,21 +486,12 @@ const experience: TimelineEntryProps[] = [
         end: new Date("2021-03-01T12:00:00.000Z"),
         start: new Date("2018-09-01T12:00:00.000Z"),
         what: (
-          <>
-            <p>
-              Promoted to senior software engineer and leader of Centaur's
-              embedded team, while supporting the web team during critical
-              deadlines. This enabled me to create truly end-to-end solutions,
-              ranging from embedded devices to client applications, and manage
-              the backlog, coordinate the team, and interview/train new members.
-            </p>
-            <br />
-            <p>
-              I also supported field engineers and directly communicated with
-              clients to resolve issues, ensuring comprehensive problem-solving
-              across all aspects of the product lifecycle.
-            </p>
-          </>
+          <p>
+            Led Centaur's embedded team while supporting the web team, building
+            end-to-end solutions from firmware to client applications. Managed
+            the backlog, coordinated the team, and directly engaged with field
+            engineers and clients to resolve issues.
+          </p>
         ),
         hightlights: [
           <span>
@@ -596,22 +568,12 @@ const experience: TimelineEntryProps[] = [
         end: new Date("2018-09-01T12:00:00.000Z"),
         start: new Date("2016-09-01T12:00:00.000Z"),
         what: (
-          <>
-            <p>
-              Joined the web app team as a full-stack developer, working with
-              Centaur's cloud services. Responsibilities included both backend
-              and frontend development, with focus on backend architecture and
-              migrating from monolith to microservices for scalable cloud
-              infrastructure.
-            </p>
-            <br />
-            <p>
-              After the first year, expanded into IoT device development to
-              support the embedded team. Initially participated as a secondary
-              developer for IP-enabled devices but quickly took leadership of
-              all software and firmware layers for such devices.
-            </p>
-          </>
+          <p>
+            Joined as a full-stack developer focused on backend architecture and
+            microservices migration. Expanded into IoT device development after
+            the first year, quickly taking ownership of all software and
+            firmware layers for IP-enabled devices.
+          </p>
         ),
         hightlights: [
           <span>
@@ -658,11 +620,8 @@ const experience: TimelineEntryProps[] = [
         start: new Date("2016-07-01T12:00:00.000Z"),
         what: (
           <p>
-            Started my career as an intern at Centaur, collaborating with the
-            web application team on frontend and backend tasks. Focused on
-            maintaining and enhancing the testability of the existing codebase,
-            improving stability and performance across various lower-priority
-            projects.
+            Collaborated with the web team on frontend and backend tasks,
+            improving codebase testability, stability, and performance.
           </p>
         ),
       },
