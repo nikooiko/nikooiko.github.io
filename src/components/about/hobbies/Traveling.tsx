@@ -20,7 +20,9 @@ import NO from "../../../images/countries/no.inline.svg";
 import PL from "../../../images/countries/pl.inline.svg";
 import RO from "../../../images/countries/ro.inline.svg";
 import SE from "../../../images/countries/se.inline.svg";
+import SI from "../../../images/countries/si.inline.svg";
 import SK from "../../../images/countries/sk.inline.svg";
+import HR from "../../../images/countries/hr.inline.svg";
 import TR from "../../../images/countries/tr.inline.svg";
 import US from "../../../images/countries/us.inline.svg";
 
@@ -47,6 +49,8 @@ const VISITED: Record<string, string> = {
   "792": "Turkey",
   "250": "France",
   "578": "Norway",
+  "705": "Slovenia",
+  "191": "Croatia",
 };
 
 const countries = [
@@ -71,6 +75,8 @@ const countries = [
   { name: "Turkey", id: "792", Flag: TR },
   { name: "France", id: "250", Flag: FR },
   { name: "Norway", id: "578", Flag: NO },
+  { name: "Slovenia", id: "705", Flag: SI },
+  { name: "Croatia", id: "191", Flag: HR },
 ];
 
 type WorldMapProps = {
