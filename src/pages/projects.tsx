@@ -6,6 +6,7 @@ import {
 import { type PageProps } from "gatsby";
 import * as React from "react";
 import brandoorLogo from "../images/projects/brandoor.svg";
+import gsatelierLogo from "../images/projects/gsatelier.png";
 import mnemiLogo from "../images/projects/mnemi.png";
 
 const projects: ProjectCardProps[] = [
@@ -20,6 +21,18 @@ const projects: ProjectCardProps[] = [
       "Independent & ad-free platform",
     ],
     logo: brandoorLogo,
+  },
+  {
+    name: "GS Atelier",
+    tagline: "Handcrafted art, made with time and attention.",
+    url: "https://gsatelier.gr",
+    description:
+      "An artisan portfolio and shop for Gianna Sovanterli, a Greek maker who crafts jewelry, home decor, and paintings by hand. Each piece is one-of-a-kind, using cotton, wood, and natural materials.",
+    highlights: [
+      "Original jewelry, home decor, paintings, and custom commissions",
+      "Built for a solo artisan to showcase and sell handmade work",
+    ],
+    logo: gsatelierLogo,
   },
   {
     name: "Mnemi",
@@ -58,7 +71,7 @@ export const Head = () => (
     <title>Projects by Nikos Oikonomou</title>
     <meta
       name="description"
-      content="Side projects built by Nikos Oikonomou, including Brandoor (curated remote job board) and Mnemi (AI memory companion)."
+      content="Side projects built by Nikos Oikonomou, including Brandoor (curated remote job board), Mnemi (AI memory companion), and GS Atelier (handcrafted art shop)."
     />
   </>
 );
