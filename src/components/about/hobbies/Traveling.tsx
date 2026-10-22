@@ -25,6 +25,7 @@ import SK from "../../../images/countries/sk.inline.svg";
 import HR from "../../../images/countries/hr.inline.svg";
 import TR from "../../../images/countries/tr.inline.svg";
 import US from "../../../images/countries/us.inline.svg";
+import ES from "../../../images/countries/es.inline.svg";
 
 // ISO 3166-1 numeric code → country name
 const VISITED: Record<string, string> = {
@@ -51,6 +52,7 @@ const VISITED: Record<string, string> = {
   "578": "Norway",
   "705": "Slovenia",
   "191": "Croatia",
+  "724": "Spain",
 };
 
 const countries = [
@@ -77,6 +79,7 @@ const countries = [
   { name: "Norway", id: "578", Flag: NO },
   { name: "Slovenia", id: "705", Flag: SI },
   { name: "Croatia", id: "191", Flag: HR },
+  { name: "Spain", id: "724", Flag: ES },
 ];
 
 type WorldMapProps = {
